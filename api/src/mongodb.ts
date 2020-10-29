@@ -4,7 +4,7 @@ import { Application } from "./declarations";
 export default function (app: Application) {
   const settings = app.get("mongodb");
   const x = "doing some logging";
-  console.log(x,${settings.host});
+  console.log(x,settings.host);
   const connection = `mongodb://${settings.user}:${settings.password}@${settings.host}:${settings.port}/${settings.db}`;
   const database = connection.substr(connection.lastIndexOf("/") + 1);
   const mongoClient = MongoClient.connect(connection, {
