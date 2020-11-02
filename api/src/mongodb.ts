@@ -8,6 +8,7 @@ export default function (app: Application) {
   const connection = 'mongodb://${settings.user}:${settings.password}@${settings.host}:${settings.port}/${settings.db}';
   const database = connection.substr(connection.lastIndexOf("/") + 1);
    console.log("this is the db " , database);
+   console.log("this is the connection " , connection);
   const mongoClient = MongoClient.connect(connection, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
