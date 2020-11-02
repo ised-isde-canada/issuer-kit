@@ -11,7 +11,9 @@ export default function (app: Application) {
   const mongoClient = MongoClient.connect(connection, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  }).then((client) => client.db(database));
+  }).then((client) => client.db(database))..catch(err => {
+     console.log('DB Connection Error: ' + err);
+});
 
   app.set("mongoClient", mongoClient);
    console.log("Mongo client is set");
