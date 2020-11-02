@@ -5,7 +5,7 @@ export default function (app: Application) {
   const settings = app.get("mongodb");
   const x = "doing some logging";
   console.log(x,settings.host, settings.port, settings.db, settings.user, settings.password);
-  const connection = 'mongodb://'+settings.user+':'+settings.password+'@'+settings.host+':'+settings.port+'/'+settings.db';
+  const connection = 'mongodb://'+settings.user+':'+settings.password+'@'+settings.host+':'+settings.port+'/'+settings.db;
   const database = connection.substr(connection.lastIndexOf("/") + 1);
    console.log("this is the db " , database);
    console.log("this is the connection " , connection);
