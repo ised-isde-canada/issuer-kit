@@ -25,8 +25,8 @@ app.configure(configuration());
 // Enable security, CORS, compression, favicon and body parsing
 app.use(helmet());
 app.use(cors());
-app.options('https://issuer-web-ised-ised-vc-auth-dev.apps.dev.openshift.ised-isde.canada.ca/*', cors());
-app.post('https://issuer-web-ised-ised-vc-auth-dev.apps.dev.openshift.ised-isde.canada.ca/*', cors(), function(req, res, next){
+app.options('/connection', cors());
+app.post('/connection', cors(), function(req, res, next){
   res.json({msg: 'This is CORS-enabled for all origins!'});
 });
 app.use(compress());
