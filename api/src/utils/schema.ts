@@ -35,6 +35,7 @@ export class SchemaUtils {
     isDefault = false,
     isPublic = false
   ) {
+    console.log("storing schemas");
     this.app.get("schemas").set(schema.schema_id || schema.schema.id, schema);
 
     if (isDefault) {
@@ -55,8 +56,11 @@ export class SchemaUtils {
   }
 
   async publishSchema(schema: SchemaDefinition): Promise<AriesSchema> {
+
     const url = `${this.utils.getAdminUrl()}/schemas`;
     logger.debug(`Publishing schema to ledger: ${JSON.stringify(schema)}`);
+    console.log(`Publishing schema to ledger: ${JSON.stringify(schema)}`);
+
     const response = await Axios.post(
       url,
       schema,
@@ -64,6 +68,7 @@ export class SchemaUtils {
     );
     const schemaResponse = response.data as AriesSchema;
     logger.debug(`Published schema: ${JSON.stringify(schemaResponse)}`);
+    console.log(`Published schema: ${JSON.stringify(schemaResponse)}`);
     this.storeSchema(schemaResponse, schema.default, schema.public);
     return Promise.resolve(schemaResponse);
   }
