@@ -1,7 +1,7 @@
 {
   "env": "production",
   "issuer": {
-    "name": "BC Identity Kit"
+    "name": "Corporations digital credential issuing app"
   },
   "inviteRequired": true,
   "authentication": {
