@@ -1,7 +1,7 @@
 {
   "env": "test",
   "issuer": {
-    "name": "Identity Kit BC - TEST"
+    "name": "Corporations digital credential issuing app"
   },
   "inviteRequired": true,
   "authentication": {
