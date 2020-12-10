@@ -1,0 +1,90 @@
+{
+   "questions":
+   [
+    {
+      "name": "registration_id",
+      "type": "text",
+      "title": "Registration ID:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "registration_date",
+      "type": "text",
+      "inputType": "date",
+      "title": "Date of Registration:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "entity_name",
+      "type": "text",
+      "inputType": "text",
+      "title": "Corporation Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "entity_type",
+      "type": "text",
+      "title": "Corporation Type:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "entity_status",
+      "type": "text",
+      "title": "Corporation Status:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "business_number",
+      "type": "text",
+      "title": "Business Number:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "directors_min",
+      "type": "text",
+      "title": "Minimum Directors:",
+      "placeHolder": "",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "directors_max",
+      "type": "text",
+      "title": "Maximum Directors:",
+      "placeHolder": "",
+      "defaultValue": "Canada",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "registration_expiry",
+      "type": "text",
+      "inputType": "date",
+      "title": "Registration Expiry:",
+      "placeHolder": "",
+      "defaultValue": "Canada",
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    }
+
+],
+"triggers": [
+    {
+      "type": "runexpression",
+      "expression": "{placeholder} notempty",
+      "runExpression": "setCurrentISODate('issued')"
+    }
+  ]
+}

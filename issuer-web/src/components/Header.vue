@@ -15,6 +15,10 @@
       <h1>{{ issuerName }}</h1>
     </div>
 
+    <div class="d-flex align-center">
+      <h2>This page must call the Corporations Canada Service.</h2>
+    </div
+
     <v-spacer></v-spacer>
 
     <div v-if="oidcUser">
