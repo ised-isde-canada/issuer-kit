@@ -51,11 +51,10 @@
 		<div id="def-top">
 			<!-- Write closure fall-back static file -->
 			<!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/appTop-en.html -->
-					<ul id="wb-tphp">
-			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
-			<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a></li>
-
-		</ul>
+			<ul id="wb-tphp">
+			     <li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			     <li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a></li>
+      </ul>
 		<header class="gc-app">
 			<div id="wb-bnr" class="container">
 
@@ -68,14 +67,24 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="app-bar">
 				<div class="container">
 					<div class="row">
 						<!-- If you want to use the settings or sign in/out buttons then add col-sm-7 -->
 						<section class="col-xs-12">
 							<!-- Add in your application name and URL below -->
-							<h2 class="wb-inv">Name of Web application</h2>
-							<a class="app-name" href="[Your application URL]">[Your application name]</a>
+							<h2 class="wb-inv">{{ issuerName }}</h2>
+							<a class="app-name" href="#">{{ issuerName }}</a>
+
+              <div v-if="oidcUser">
+                Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
+                <v-btn @click="signOutOidc" text>
+                  <span class="mr-2">Leave</span>
+                  <v-icon>mdi-logout</v-icon>
+                </v-btn>
+              </div>
+
 						</section>
 					</div>
 				</div>
@@ -90,18 +99,34 @@
 			defTop.outerHTML = wet.builder.appTop({
 
 				"appName": [{"text": "Application name", "href": "#"}],
-				"lngLinks": [{"lang": "fr",	"href": "apptop_breadcrumbs-fr.shtml", "text": "Français"}],
-				"breadcrumbs": [{
-					"title": "My application",
-					"href": "http://open.canada.ca/en/apps?_ga=2.158588857.2050402716.1501624806-1491110290.1492697601"
-				}, {
-					"title": "First section",
-					"href": "#"
-				}, {
-					"title": "Service A"
-				}]
+				"lngLinks": [{"lang": "fr",	"href": "apptop_breadcrumbs-fr.shtml", "text": "Français"}]
 			});
 		</script>
+    <script lang="ts">
+    import { Component, Prop, Vue } from "vue-property-decorator";
+    import { mapActions, mapGetters } from "vuex";
+    import { Configuration } from "../models/appConfig";
+
+    @Component({
+      computed: {
+        ...mapGetters("oidcStore", ["oidcUser"])
+      },
+      methods: {
+        ...mapActions("oidcStore", ["signOutOidc"])
+      }
+    })
+    export default class Header extends Vue {
+      @Prop() logoutUrl!: string;
+      private issuerName = "";
+
+      created() {
+        const appConfig = this.$store.getters[
+          "configuration/getConfiguration"
+        ] as Configuration;
+        this.issuerName = appConfig.app.issuer.name;
+      }
+    }
+    </script>
 		<main property="mainContentOfPage" class="container">
 
         <!-- ACTUAL APP -->
