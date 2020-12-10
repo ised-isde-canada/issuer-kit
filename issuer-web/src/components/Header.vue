@@ -17,7 +17,7 @@
 
     <div class="d-flex align-center">
       <h2>This page must call the Corporations Canada Service.</h2>
-    </div
+    </div>
 
     <v-spacer></v-spacer>
 
