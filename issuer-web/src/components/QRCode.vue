@@ -1,7 +1,6 @@
 <style scoped lang="scss"></style>
 
 <template>
-  <p>This is a test</p>
   <vue-qrcode :value="value" :width="width" />
 </template>
 
