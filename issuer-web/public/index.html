@@ -1,18 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <script src="/config/custom-scripts.js"></script>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+
+		<!-- FEATHERS TOP -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+        <script src="/config/custom-scripts.js"></script>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+
+		<!-- Meta data -->
+		<meta name="description" content="">
+		<!-- Meta data-->
+		<!-- Load closure template scripts -->
+
+		<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/cdts/compiled/soyutils.js"></script>
+		<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/cdts/compiled/wet-en.js"></script>
+
+		<noscript>
+			<!-- Write closure fall-back static file -->
+			<!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/refTop.html -->
+					<!--[if gte IE 9 | !IE ]><!-->
+		<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/assets/favicon.ico" rel="icon" type="image/x-icon">
+		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/css/theme.min.css">
+		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/cdts/cdtsfixes.css">
+		<!-- Are you using the application templates? If so add the following CSS file -->
+		<!-- <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/cdts/cdtsapps.css">-->
+		<!--<![endif]-->
+		<!--[if lt IE 9]>
+		<link href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/assets/favicon.ico" rel="shortcut icon" />
+		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/css/ie8-theme.min.css" />
+		<![endif]-->
+		<!--[if lte IE 9]><![endif]-->
+		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/css/noscript.min.css" />
+		<link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/cdts/cdtsnoscript.css" />
+		</noscript>
+		<!-- Write closure template -->
+		<script>
+			document.write(wet.builder.refTop({
+
+				"isApplication": true
+			}));
+		</script>
+
+	</head>
+	<body vocab="http://schema.org/" typeof="WebPage">
+		<div id="def-top">
+			<!-- Write closure fall-back static file -->
+			<!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/appTop-en.html -->
+					<ul id="wb-tphp">
+			<li class="wb-slc"><a class="wb-sl" href="#wb-cont">Skip to main content</a></li>
+			<li class="wb-slc visible-sm visible-md visible-lg"><a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a></li>
+
+		</ul>
+		<header class="gc-app">
+			<div id="wb-bnr" class="container">
+
+				<div class="row">
+					<div class="brand col-xs-5 col-md-4">
+						<a href="https://www.canada.ca/en.html">
+							<img src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/assets/sig-blk-en.svg" alt="" />
+							<span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="app-bar">
+				<div class="container">
+					<div class="row">
+						<!-- If you want to use the settings or sign in/out buttons then add col-sm-7 -->
+						<section class="col-xs-12">
+							<!-- Add in your application name and URL below -->
+							<h2 class="wb-inv">Name of Web application</h2>
+							<a class="app-name" href="[Your application URL]">[Your application name]</a>
+						</section>
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+		</div>
+		<!-- Write closure template -->
+		<script>
+			var defTop = document.getElementById("def-top");
+			defTop.outerHTML = wet.builder.appTop({
+
+				"appName": [{"text": "Application name", "href": "#"}],
+				"lngLinks": [{"lang": "fr",	"href": "apptop_breadcrumbs-fr.shtml", "text": "Français"}],
+				"breadcrumbs": [{
+					"title": "My application",
+					"href": "http://open.canada.ca/en/apps?_ga=2.158588857.2050402716.1501624806-1491110290.1492697601"
+				}, {
+					"title": "First section",
+					"href": "#"
+				}, {
+					"title": "Service A"
+				}]
+			});
+		</script>
+		<main property="mainContentOfPage" class="container">
+
+        <!-- ACTUAL APP -->
+        <noscript>
+          <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+
+			<div id="def-preFooter">
+				<!-- Write closure fall-back static file -->
+				<!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/preFooter-en.html -->
+				<div class="pagedetails">
+                <div class="row">
+                    <div class="col-sm-6 col-md-5 col-lg-4">
+                        <a href="https://www.canada.ca/en/report-problem.html" class="btn btn-default text-center">Report a problem on this page</a>
+                    </div>
+                </div>
+
+                <dl id="wb-dtmd">
+                    <dt>Date modified: </dt>
+                    <dd><time property="dateModified">2019-03-01</time></dd>
+                </dl>
+            </div>
+
+			</div>
+			<!-- Write closure template -->
+			<script>
+				var defPreFooter = document.getElementById("def-preFooter");
+				defPreFooter.outerHTML = wet.builder.preFooter({
+
+					"dateModified": "2017-08-01"
+				});
+			</script>
+		</main>
+		<div id="def-footer">
+
+		<footer id="wb-info">
+			<div class="brand">
+				<div class="container">
+					<div class="row">
+						<nav class="col-md-10 ftr-urlt-lnk">
+							<h2 class="wb-inv">About this Web application</h2>
+							<ul>
+								<li><a href="https://www.canada.ca/en/contact.html">Contact information</a></li>
+								<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+								<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+							</ul>
+						</nav>
+						<div class="col-xs-6 visible-sm visible-xs tofpg">
+							<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+						</div>
+						<div class="col-xs-6 col-md-2 text-right">
+							<img src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_30/assets/wmms-blk.svg" alt="Symbol of the Government of Canada" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		</div>
+		<!-- Write closure template -->
+		<script>
+			var defFooter = document.getElementById("def-footer");
+			defFooter.outerHTML = wet.builder.appFooter({
+
+				"showFeatures": false
+			});
+		</script>
+		<!-- Write closure template -->
+		<script>
+			document.write(wet.builder.refFooter({
+
+				"isApplication": true
+			}));
+		</script>
+	</body>
 </html>
