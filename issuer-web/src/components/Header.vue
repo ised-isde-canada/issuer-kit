@@ -33,7 +33,7 @@
   </div>
 </div>
 </div>
-
+  <v-app-bar app light>
     <div v-if="oidcUser">
       Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
       <v-btn @click="signOutOidc" text>
@@ -41,7 +41,7 @@
         <v-icon>mdi-logout</v-icon>
       </v-btn>
     </div>
-
+  </v-app-bar>
 </template>
 
 <script lang="ts">
