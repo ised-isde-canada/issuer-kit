@@ -1,14 +1,5 @@
 <template>
-    <div class="d-flex align-center">
-      <h1>{{ issuerName }}</h1>
-    </div>
-
-    <div class="d-flex align-center">
-      <h2>This page must call the Corporations Canada Service.</h2>
-    </div>
-
-    <v-spacer></v-spacer>
-
+  <v-app-bar app dark>
     <div v-if="oidcUser">
       Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
       <v-btn @click="signOutOidc" text>
@@ -16,6 +7,7 @@
         <v-icon>mdi-logout</v-icon>
       </v-btn>
     </div>
+  </v-app-bar>
 </template>
 
 <script lang="ts">
