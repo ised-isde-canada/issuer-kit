@@ -38,7 +38,6 @@
 <template>
   <v-app>
     <Header />
-
     <v-main>
       <router-view></router-view>
     </v-main>
