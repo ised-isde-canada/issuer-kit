@@ -1,6 +1,7 @@
 <style scoped lang="scss"></style>
 
 <template>
+<v-footer padless>
 <div id="def-preFooter">
   <!-- Write closure fall-back static file -->
   <!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/preFooter-en.html -->
@@ -26,7 +27,7 @@
     "dateModified": "2017-08-01"
   });
 </script>
-</main>
+
 <div id="def-footer">
 
 <footer id="wb-info">
@@ -68,6 +69,7 @@ document.write(wet.builder.refFooter({
   "isApplication": true
 }));
 </script>
+</v-footer>
 </template>
 
 <script lang="ts">
