@@ -1,4 +1,5 @@
 <template>
+  <v-app-bar app>
 <div id="def-top">
   <!-- Write closure fall-back static file -->
   <!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/appTop-en.html -->
@@ -54,8 +55,8 @@
     "lngLinks": [{"lang": "fr",	"href": "french.html", "text": "Français"}]
   });
 </script>
-<main property="mainContentOfPage" class="container">
 
+  </v-app-bar>
 </template>
 
 <script lang="ts">
