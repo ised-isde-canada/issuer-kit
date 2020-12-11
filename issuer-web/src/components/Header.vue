@@ -18,30 +18,29 @@
       </div>
     </div>
   </div>
-
+  <v-app-bar app light flat>
   <div class="app-bar">
     <div class="container row">
       <div class="row">
         <!-- If you want to use the settings or sign in/out buttons then add col-sm-7 -->
-        <section class="col-xs-12">
+        <section class="col-xs-6">
           <!-- Add in your application name and URL below -->
           <h2 class="wb-inv">Corporations digital credential issuing app</h2>
           <a class="app-name" href="#">Corporations digital credential issuing app</a>
         </section>
+        <div class="col-xs-6" v-if="oidcUser">
+          Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
+          <v-btn @click="signOutOidc" text>
+            <span class="mr-2">Leave</span>
+            <v-icon>mdi-logout</v-icon>
+          </v-btn>
+        </div>
       </div>
     </div>
   </div>
+  </v-app-bar>
 </div>
 </div>
-
-    <div v-if="oidcUser">
-      Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
-      <v-btn @click="signOutOidc" text>
-        <span class="mr-2">Leave</span>
-        <v-icon>mdi-logout</v-icon>
-      </v-btn>
-    </div>
-
 </template>
 
 <script lang="ts">
