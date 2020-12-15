@@ -10,7 +10,7 @@
 
 <template>
   <v-container fluid>
-    <v-card class="mx-auto my-2 lighten-4" max-width="800" tile>
+    <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-card-title class="headline mb-1">Review and Confirm</v-card-title>
 
       <v-list disabled>
@@ -60,7 +60,7 @@
               color="success"
               :disabled="!confirmed"
               :to="{ path: 'connect' }"
-              >Proceed</v-btn
+              >Request credential</v-btn
             >
           </v-col>
         </v-row>
