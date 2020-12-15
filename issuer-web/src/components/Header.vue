@@ -31,6 +31,8 @@
             <h2 class="wb-inv">Corporations digital credential issuing app</h2>
             <a class="app-name" href="#">Corporations digital credential issuing app</a>
 
+            <v-spacer></v-spacer>
+
             <div v-if="oidcUser">
               Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
               <v-btn @click="signOutOidc" text>
@@ -45,34 +47,17 @@
   </header>
   </div>
   <!-- Write closure template -->
-  <script>
-    var defTop = document.getElementById("def-top");
-    defTop.outerHTML = wet.builder.appTop({
-
-      "appName": [{"text": "Corporations digital credential issuing app", "href": "#"}],
-      "lngLinks": [{"lang": "fr",	"href": "french.html", "text": "Français"}]
-    });
-  </script>
-
-
-
-    <div class="d-flex align-center">
-      <h1>{{ issuerName }}</h1>
-    </div>
-
-    <div class="d-flex align-center">
-      <h2>This page must call the Corporations Canada Service.</h2>
-    </div>
-
-    <v-spacer></v-spacer>
-
-
   </v-app-bar>
 
-  <v-content>
-  <div> this is a test of content</div>
-  </v-content>
 </template>
+<script>
+  var defTop = document.getElementById("def-top");
+  defTop.outerHTML = wet.builder.appTop({
+
+    "appName": [{"text": "Corporations digital credential issuing app", "href": "#"}],
+    "lngLinks": [{"lang": "fr",	"href": "french.html", "text": "Français"}]
+  });
+</script>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
