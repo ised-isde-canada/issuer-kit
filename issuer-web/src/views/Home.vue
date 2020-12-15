@@ -2,6 +2,7 @@
 
 <template>
   <v-container fluid>
+    <h2 class="text-center">Terms</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container>
         <CustomHtmlComponent :html="htmlContent" />
