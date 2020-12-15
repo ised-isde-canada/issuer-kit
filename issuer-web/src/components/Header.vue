@@ -71,6 +71,7 @@
 
   <v-content>
   <div> this is a test of content</div>
+  </v-content>
 </template>
 
 <script lang="ts">
