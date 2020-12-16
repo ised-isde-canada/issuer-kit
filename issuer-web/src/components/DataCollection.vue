@@ -16,11 +16,12 @@
 </style>
 
 <template>
-
-  <v-container class="claim-data-container">
-    <survey :survey="survey" :key="surveyKey"></survey>
-  </v-container>
-
+  <h2 class="text-center">Enter your information</h2>
+  <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
+    <v-container class="claim-data-container">
+      <survey :survey="survey" :key="surveyKey"></survey>
+    </v-container>
+  </v-card>
 </template>
 
 <script lang="ts">

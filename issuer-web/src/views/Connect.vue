@@ -8,6 +8,7 @@
   <v-container fluid>
     <h2 class="text-center">Connect with Issuer</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
+      <div class="content">
       <p>
         Scan the QR code using your Trusted Digital Wallet to establish a
         connection to Corporations.
@@ -29,13 +30,14 @@
       ></v-progress-circular>
 
       <QRCode v-if="qrKey > 0" :value="inviteURL" :width="width" :key="qrKey" />
-
+    </div>
       <v-container>
         <v-btn color="secondary" :h="`didcomm://launch?d_m=${base64Invitation}`">
           <v-icon left light>fas fa-external-link-alt</v-icon>
           Open in a Trusted Digital Wallet
         </v-btn>
       </v-container>
+
     </div>
       <v-divider class="mx-4"></v-divider>
 
