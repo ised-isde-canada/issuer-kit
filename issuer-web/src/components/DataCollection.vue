@@ -12,14 +12,16 @@
 
 .sv_main .sv_container .sv_body .sv_nav .sv_complete_btn {
   background-color: var(--v-success-base);
+  margin-bottom: 20px;
 }
 </style>
 
 <template>
-<v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
-  <v-container class="claim-data-container">
-    <survey :survey="survey" :key="surveyKey"></survey>
-  </v-container>
+  <h2 class="text-center">Enter your information</h2>
+  <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
+    <v-container class="claim-data-container">
+      <survey :survey="survey" :key="surveyKey"></survey>
+    </v-container>
   </v-card>
 </template>
 
@@ -49,7 +51,7 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
-    this.survey.completeText = "Request Credential";
+    this.survey.completeText = "Next";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {
