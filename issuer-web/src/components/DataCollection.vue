@@ -16,12 +16,11 @@
 </style>
 
 <template>
-  <h2 class="text-center">Enter your information</h2>
-  <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
-    <v-container class="claim-data-container">
-      <survey :survey="survey" :key="surveyKey"></survey>
-    </v-container>
-  </v-card>
+
+  <v-container class="claim-data-container">
+    <survey :survey="survey" :key="surveyKey"></survey>
+  </v-container>
+
 </template>
 
 <script lang="ts">
@@ -50,7 +49,7 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
-    this.survey.completeText = "Next";
+    this.survey.completeText = "Request Credential";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {
