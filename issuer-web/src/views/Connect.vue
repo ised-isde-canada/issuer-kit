@@ -31,6 +31,7 @@
 
       <QRCode v-if="qrKey > 0" :value="inviteURL" :width="width" :key="qrKey" />
 
+      <div class="clearfix"></div>
         <v-btn color="secondary" :h="`didcomm://launch?d_m=${base64Invitation}`">
           <v-icon left light>fas fa-external-link-alt</v-icon>
           Open in a Trusted Digital Wallet
