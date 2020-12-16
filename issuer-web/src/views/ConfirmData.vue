@@ -9,6 +9,7 @@
 
 .v-label {
   margin-bottom: 0px !important;
+  top: 3px;
 }
 </style>
 
