@@ -12,7 +12,6 @@
 
 .sv_main .sv_container .sv_body .sv_nav .sv_complete_btn {
   background-color: var(--v-success-base);
-  margin-bottom: 20px;
 }
 </style>
 
