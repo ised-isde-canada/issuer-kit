@@ -1,16 +1,6 @@
-<style lang="scss">
-.v-toolbar__content {
-  border-bottom: 2px solid var(--v-secondary-base);
-}
-
-.issuer-logo {
-  height: 50px;
-  width: 50px;
-}
-</style>
 
 <template>
-  <v-app-bar app color="primary" dark>
+  <v-app-bar app color="primary" dark absolute>
     <div class="d-flex align-center">
       <h1>{{ issuerName }}</h1>
     </div>

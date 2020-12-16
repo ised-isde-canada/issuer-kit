@@ -46,7 +46,7 @@ label {
           <v-col cols="10">
             <v-checkbox
               v-model="confirmed"
-              color: "success"
+              color="success"
               label="I confirm that the above information is correct, and that I want to proceed."
             ></v-checkbox>
           </v-col>
