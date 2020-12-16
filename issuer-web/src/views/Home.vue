@@ -1,5 +1,7 @@
 <style scoped lang="scss"></style>
-
+.v-label {
+  margin-bottom: 0px !important;
+}
 <template>
   <v-container fluid>
     <h2 class="text-center">Terms of Service</h2>

@@ -7,7 +7,7 @@
   font-weight: bold;
 }
 
-label {
+.v-label {
   margin-bottom: 0px !important;
 }
 </style>
