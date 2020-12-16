@@ -7,8 +7,9 @@
   font-weight: bold;
 }
 
-.v-label {
+label.v-label.theme--light {
   margin-bottom: 0px !important;
+  margin-top: 0px !important;
   top: 3px;
 }
 </style>
