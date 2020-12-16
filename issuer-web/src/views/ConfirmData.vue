@@ -61,7 +61,6 @@
           </v-col>
           <v-col cols="6" md="2">
             <v-btn
-              outlined
               color="success"
               :disabled="!confirmed"
               :to="{ path: 'connect' }"
