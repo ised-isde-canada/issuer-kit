@@ -2,8 +2,8 @@
 
 <template>
   <v-container fluid>
-    <v-card class="mx-auto my-2 lighten-4" max-width="800" tile>
-      <v-card-title class="headline mb-1">Issuing Credential</v-card-title>
+    <h2 class="text-center">Issuing Credential</h2>
+    <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>    
 
       <v-container class="progress-steps">
         <v-row>
