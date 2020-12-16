@@ -1,7 +1,6 @@
 <style scoped></style>
 
 <template>
-  <h2 class="text-center">Enter your information</h2>
   <DataCollection />
 </template>
 
