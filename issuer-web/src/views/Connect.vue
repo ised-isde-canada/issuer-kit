@@ -2,17 +2,16 @@
 
 <template>
   <v-container fluid>
-    <v-card class="mx-auto my-2 lighten-4" max-width="800" tile>
-      <v-card-title class="headline mb-1">Connect with Issuer</v-card-title>
+    <h2 class="text-center">Connect with Issuer</h2>
+    <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
 
       <p>
-        Scan the QR code using a Trusted Digital Wallet to establish a
-        connection with the Issuer.
+        Scan the QR code using your Trusted Digital Wallet to establish a
+        connection with Corporations digital credential.
       </p>
 
       <p>
-        Once a connection is established, the credential issuance process will
-        start automatically.
+        Once a connection is established and you present it on your digital wallet, it will issue you your credential.
       </p>
 
       <v-progress-circular
