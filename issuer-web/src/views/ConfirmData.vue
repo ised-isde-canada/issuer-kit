@@ -6,6 +6,10 @@
 .claim-value {
   font-weight: bold;
 }
+
+label {
+  margin-bottom: 0px !important;
+}
 </style>
 
 <template>
@@ -42,6 +46,7 @@
           <v-col cols="10">
             <v-checkbox
               v-model="confirmed"
+              color: "success"
               label="I confirm that the above information is correct, and that I want to proceed."
             ></v-checkbox>
           </v-col>
@@ -49,7 +54,7 @@
         </v-row>
         <v-row align="center" justify="space-between" class="mr-2">
           <v-col cols="6" md="2">
-            <v-btn outlined color="error" :to="{ path: 'credential-data' }"
+            <v-btn outlined color="secondary" :to="{ path: 'credential-data' }"
               >Back</v-btn
             >
           </v-col>

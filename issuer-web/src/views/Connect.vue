@@ -1,19 +1,23 @@
-<style scoped lang="scss"></style>
+<style type="text/css">
+  .content {
+    padding: 25px;
+  }
+</style>
 
 <template>
   <v-container fluid>
     <h2 class="text-center">Connect with Issuer</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
-
       <p>
         Scan the QR code using your Trusted Digital Wallet to establish a
-        connection with Corporations digital credential.
+        connection to Corporations.
       </p>
 
       <p>
         Once a connection is established and you present it on your digital wallet, it will issue you your credential.
       </p>
 
+    <div class="text-center">
       <v-progress-circular
         v-if="qrKey === 0"
         :indeterminate="true"
@@ -27,18 +31,18 @@
       <QRCode v-if="qrKey > 0" :value="inviteURL" :width="width" :key="qrKey" />
 
       <v-container>
-        <v-btn color="white" :h="`didcomm://launch?d_m=${base64Invitation}`">
+        <v-btn color="secondary" :h="`didcomm://launch?d_m=${base64Invitation}`">
           <v-icon left light>fas fa-external-link-alt</v-icon>
           Open in a Trusted Digital Wallet
         </v-btn>
       </v-container>
-
+    </div>
       <v-divider class="mx-4"></v-divider>
 
       <v-container fluid>
         <v-row align="center" justify="space-between" class="mr-2">
           <v-col cols="6" md="2">
-            <v-btn outlined color="error" :to="{ path: 'confirm-data' }"
+            <v-btn outlined color="secondary" :to="{ path: 'confirm-data' }"
               >Back</v-btn
             >
           </v-col>
