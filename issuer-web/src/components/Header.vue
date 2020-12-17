@@ -1,20 +1,20 @@
 
 <template>
   <v-app-bar app color="primary" dark absolute flat dense>
-    <div class="container">
-    <div class="d-flex align-center">
-      <h1>{{ issuerName }}</h1>
-    </div>
-
-    <v-spacer></v-spacer>
-
-    <div v-if="oidcUser">
-      Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
-      <v-btn @click="signOutOidc" text>
-        <span class="mr-2">Leave</span>
-        <v-icon>mdi-logout</v-icon>
-      </v-btn>
-    </div>
+    <div class="container row">
+      <div class="col-xs-12 col-sm-7">
+        <h2 class="wb-inv">{{ issuerName }}</h2>
+        <a class="app-name" href="#">{{ issuerName }}</a>
+      </div>
+      <div class="col-xs-12 col-sm-7">
+        <div v-if="oidcUser">
+          Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
+          <v-btn @click="signOutOidc" text>
+            <span class="mr-2">Leave</span>
+            <v-icon>mdi-logout</v-icon>
+          </v-btn>
+        </div>
+      </div>
     </div>
   </v-app-bar>
 </template>
