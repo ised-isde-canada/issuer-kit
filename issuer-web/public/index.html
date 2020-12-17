@@ -74,6 +74,8 @@
 		<script>
 			var defTop = document.getElementById("def-top");
 			defTop.outerHTML = wet.builder.appTop({
+
+				"appName": [{"text": "", "href": ""}],
 				"lngLinks": [{"lang": "fr",	"href": "french.html", "text": "Français"}]
 			});
 		</script>
@@ -86,7 +88,7 @@
         <div id="app"></div>
         <!-- built files will be auto injected -->
 
-			<div id="def-preFooter">
+			<div id="def-preFooter" class="container">
 				<!-- Write closure fall-back static file -->
 				<!-- /ROOT/app/cls/WET/gcweb/v4_0_30/cdts/static/preFooter-en.html -->
 				<div class="pagedetails">
