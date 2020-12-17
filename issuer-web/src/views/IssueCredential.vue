@@ -2,14 +2,14 @@
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">Issuing Credential</h2>
-    <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>    
+    <h2 class="text-center">Issuing credential</h2>
+    <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
 
       <v-container class="progress-steps">
         <v-row>
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-wifi</v-icon>
-            Connected to the Issuer Agent
+            Connected to Corporations issuer agent
           </v-col>
         </v-row>
         <v-row v-if="!issued">
@@ -22,19 +22,19 @@
               color="secondary darken-2"
               class="mx-3"
             ></v-progress-circular>
-            Credential Offer sent. Waiting for you to accept it...
+            Credential offer sent. Waiting for you to accept it...
           </v-col>
         </v-row>
         <v-row v-if="issued">
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-handshake</v-icon>
-            You accepted the Credential Offer.
+            You accepted the credential offer.
           </v-col>
         </v-row>
         <v-row v-if="issued">
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-check-circle</v-icon>
-            Your Credential has been Issued!
+            Your credential has been issued!
           </v-col>
         </v-row>
       </v-container>
@@ -44,9 +44,6 @@
       <v-container fluid v-if="issued">
         <p>
           Congratulations, your credential has been issued!
-          <br />
-          You will receive a notification to store the credential in your
-          wallet.
         </p>
         <p>
           {{ successText }}
