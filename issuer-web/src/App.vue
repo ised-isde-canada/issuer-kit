@@ -33,6 +33,9 @@
 .v-application--wrap {
   min-height: 100px;
 }
+i {
+  margin-bottom: 3px !important;
+}
 </style>
 
 <template>
