@@ -1,12 +1,9 @@
 
 <template>
-  <v-app-bar app color="primary" dark absolute>
+  <v-app-bar app color="primary" dark absolute flat dense>
+    <div class="container">
     <div class="d-flex align-center">
       <h1>{{ issuerName }}</h1>
-    </div>
-
-    <div class="d-flex align-center">
-      <h2>This page must call the Corporations Canada Service.</h2>
     </div>
 
     <v-spacer></v-spacer>
@@ -17,6 +14,7 @@
         <span class="mr-2">Leave</span>
         <v-icon>mdi-logout</v-icon>
       </v-btn>
+    </div>
     </div>
   </v-app-bar>
 </template>
