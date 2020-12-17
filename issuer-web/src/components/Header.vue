@@ -1,8 +1,8 @@
 
 <template>
   <v-app-bar app color="primary" absolute flat dense>
-    <div class="d-flex align-center">
-    <div class="container row">
+    <div class="container align-center">
+    <div class="row">
       <div class="col-xs-12 col-sm-7">
         <h2 class="wb-inv">{{ issuerName }}</h2>
         <div class="app-name">{{ issuerName }}</div>
