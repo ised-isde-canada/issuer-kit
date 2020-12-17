@@ -12,6 +12,10 @@ label.v-label.theme--light {
   margin-top: 0px !important;
   top: 3px;
 }
+
+.v-icon {
+  margin-bottom: 3px;
+}
 </style>
 
 <template>

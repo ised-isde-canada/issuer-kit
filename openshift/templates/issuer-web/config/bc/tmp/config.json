@@ -22,7 +22,7 @@
   "url": "https://identity-kit-controllerised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca"
   },
   "issuedSuccess": {
-    "successText": "To try out your new credential:",
+    "successText": "Try out your new credential:",
     "links": []
   },
   "credentials": {

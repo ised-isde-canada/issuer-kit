@@ -22,7 +22,7 @@
     "url": "/api"
   },
   "issuedSuccess": {
-    "successText": "To try out your new credential:",
+    "successText": "Try out your new credential:",
     "links": [
       {
         "url": "https://csb-audio.pathfinder.gov.bc.ca",
