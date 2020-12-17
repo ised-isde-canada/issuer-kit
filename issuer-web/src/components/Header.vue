@@ -1,12 +1,13 @@
 
 <template>
-  <v-app-bar app color="primary" dark absolute flat dense>
+  <v-app-bar app color="primary" absolute flat dense>
+    <div class="d-flex align-center">
     <div class="container row">
       <div class="col-xs-12 col-sm-7">
         <h2 class="wb-inv">{{ issuerName }}</h2>
-        <a class="app-name" href="#">{{ issuerName }}</a>
+        <div class="app-name">{{ issuerName }}</div>
       </div>
-      <div class="col-xs-12 col-sm-7">
+      <div class="col-xs-12 col-sm-5">
         <div v-if="oidcUser">
           Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
           <v-btn @click="signOutOidc" text>
@@ -15,6 +16,7 @@
           </v-btn>
         </div>
       </div>
+    </div>
     </div>
   </v-app-bar>
 </template>
