@@ -4,10 +4,9 @@
     <div class="container align-center">
     <div class="row">
       <div class="col-xs-12 col-sm-7">
-        <h2 class="wb-inv">{{ issuerName }}</h2>
-        <div class="app-name">{{ issuerName }}</div>
+        <h2 class="mrgn-tp-10">{{ issuerName }}</h2>
       </div>
-      <div class="col-xs-12 col-sm-5 text-right mrgn-tp-md">
+      <div class="col-xs-12 col-sm-5 text-right mrgn-tp-10">
         <div v-if="oidcUser">
           Signed in as {{ oidcUser.given_name }} {{ oidcUser.family_name }}
           <v-btn @click="signOutOidc" text>

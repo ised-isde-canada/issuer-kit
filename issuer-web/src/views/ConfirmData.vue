@@ -20,7 +20,7 @@ label.v-label.theme--light {
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">Review and Confirm</h2>
+    <h2 class="text-center">Review and confirm</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-list disabled>
         <v-list-item-group color="primary">

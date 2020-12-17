@@ -53,7 +53,7 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
-    this.survey.completeText = "Next";
+    this.survey.completeText = "NEXT";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {

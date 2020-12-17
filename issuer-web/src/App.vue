@@ -36,6 +36,12 @@
 i {
   margin-bottom: 3px !important;
 }
+.app-bar {
+    display: none !important;
+}
+.mrgn-tp-10 {
+  margin-top: 10px;
+}
 </style>
 
 <template>
