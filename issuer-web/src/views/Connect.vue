@@ -6,7 +6,7 @@
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">Connect with Issuer</h2>
+    <h2 class="text-center">Connect with issuer</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <div class="content text-center">
 
