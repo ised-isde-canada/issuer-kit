@@ -2,7 +2,7 @@
 
 <template>
   <v-container fluid>
-    <v-card class="mx-auto my-2 lighten-4" max-width="800" tile>
+    <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container>
         <v-icon x-large color="error darken-2"
           >fas fa-exclamation-triangle</v-icon
