@@ -5,7 +5,7 @@
     <h2 class="text-center">Issuing credential</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
 
-      <v-container class="progress-steps">
+      <v-container class="progress-steps mrgn-tp-md">
         <v-row>
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-wifi</v-icon>
@@ -42,17 +42,7 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p>
-          Congratulations, your credential has been issued!
-        </p>
-        <p>
-          {{ successText }}
-        </p>
-        <ul>
-          <li v-for="link in successLinks" :key="link.url">
-            <a :href="link.url">{{ link.description }}</a>
-          </li>
-        </ul>
+        <p class="text-center text-success"><strong>Congratulations, your credential has been issued!</strong></p>
       </v-container>
     </v-card>
   </v-container>
