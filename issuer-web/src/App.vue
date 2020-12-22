@@ -42,6 +42,9 @@ i {
 .mrgn-tp-10 {
   margin-top: 10px;
 }
+.v-application {
+    font-family: "Noto Sans",sans-serif;
+}
 </style>
 
 <template>
