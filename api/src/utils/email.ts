@@ -1,5 +1,6 @@
 import { HookContext } from "@feathersjs/feathers";
 import { loadFileAsText } from "./load-config-file";
+import logger from "../logger";
 
 /**
  * Replace the contents of the string template based on a context
