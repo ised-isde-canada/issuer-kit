@@ -13,7 +13,7 @@ const inject = (str: string, obj: { [index: string]: any }) =>
 
 export async function sendEmail(context: HookContext) {
 
-    console.log(`This is the data  ${JSON.stringify(context.data)}`);
+    console.log(`This is the relationship  ${context.data.data.relationship}`);
   const settings = context.app.get("emailSettings");
   const inviteUrl = `${context.app.get("publicSite").url}/?invite_token=${
     context.result.token
