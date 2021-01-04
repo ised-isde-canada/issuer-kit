@@ -15,9 +15,16 @@ export async function sendEmail(context: HookContext) {
 
     console.log(`This is the relationship  ${context.data.data.relationship}`);
   const settings = context.app.get("emailSettings");
-  const inviteUrl = `${context.app.get("publicSite").url}/?invite_token=${
-    context.result.token
-  }`;
+  if(!${context.data.data.relationship}){
+    const inviteUrl = `${context.app.get("publicSite").url}/?invite_token=${
+      context.result.token
+    }`;
+  } else {
+    const inviteUrl = `${context.app.get("publicSiteVR").url}/?invite_token=${
+      context.result.token
+    }`;
+  }
+
   settings.inviteUrl = inviteUrl; // add to default object used for string replacement
   const emailBodyTemplate = loadFileAsText(
     settings.emailTemplate || "invite-email.html"
@@ -26,11 +33,19 @@ export async function sendEmail(context: HookContext) {
   // Replace variables in email template with provided context from configuration
   const emailBody = inject(emailBodyTemplate, settings);
 
+  if(!${context.data.data.relationship}){
   const email = {
     to: context.data.email,
     subject: settings.subject,
     html: emailBody,
   };
+ } else {
+    const email = {
+    to: context.data.email,
+    subject: settings.subjectVR,
+    html: emailBody,
+  };
+}
   await context.app.service("mailer").create(email);
   return context;
 }
