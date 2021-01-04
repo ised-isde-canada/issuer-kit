@@ -1,9 +1,8 @@
 [
   {
     "default": true,
-    "public": false,
-    "schema_name": "verified_person",
-    "schema_version": "1.4.0",
+    "schema_name": "ised_verified_person",
+    "schema_version": "0.1",
     "attributes": [
       "given_names",
       "family_name",
@@ -14,6 +13,56 @@
       "region",
       "country",
       "issued"
-    ]
-  }
+    ],
+    "revocable": true,
+    "tag": "ised-cc-vp",
+    "public": true
+  },
+   {
+    "schema_name": "ised_verified_organization",
+    "schema_version": "0.1",
+    "attributes": [
+      "registration_id",
+      "registration_date",
+      "entity_name",
+      "entity_type",
+      "entity_status",
+      "business_number",
+      "directors_min",
+      "directors_max",
+      "registration_expiry"
+    ],
+    "revocable": true,
+    "tag": "ised-cc-vo",
+    "public": true
+  },
+  {
+    "schema_name": "Verified Organization",
+    "schema_version": "0.2",
+    "attributes": [
+      "corporationNumber",
+      "businessNumber",
+      "corporateName" ,
+      "legislationName",
+      "statusName"
+    ],
+    "revocable": true,
+    "tag": "ised-verified-organization",
+    "public": true
+ },
+ {
+   "schema_name": "Verified Relationship",
+   "schema_version": "0.1",
+   "attributes": [
+     "corporationNumber",
+     "businessNumber",
+     "corporateName" ,
+     "relationship",
+     "firstName",
+     "lastName"
+   ],
+   "revocable": true,
+   "tag": "ised-verified-relationship",
+   "public": true
+}
 ]

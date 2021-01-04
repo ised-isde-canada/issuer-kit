@@ -1,0 +1,31 @@
+{
+  "env": "test",
+  "issuer": {
+    "name": "Corporations digital credential issuing app"
+  },
+  "inviteRequired": true,
+  "authentication": {
+    "enabled": true,
+    "oidcSettings": {
+      "authority": "https://sso-demo.ised-isde.canada.ca/auth/realms/individual" ,
+      "clientId": "issuer-public",
+      "redirectUri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca/oidc-callback" ,
+      "redirect_uri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca/oidc-callback-error" ,
+      "responseType": "code",
+      "scope": "openid profile email",
+      "automaticSilentRenew": true,
+      "silentRedirectUri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca" ,
+      "post_logout_redirect_uri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca"
+    }
+  },
+  "apiServer": {
+  "url": "https://identity-kit-controllerised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca"
+  },
+  "issuedSuccess": {
+    "successText": "To try out your new credential:",
+    "links": []
+  },
+  "credentials": {
+     "schema_id": "7cTuxo7KuS7uTPQ9ua9kQE:2:Verified Organization:0.2"
+   }
+}
