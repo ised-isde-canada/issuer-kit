@@ -1,0 +1,21 @@
+{
+  "icons": {
+    "iconfont": "fa"
+  },
+  "theme": {
+    "options": {
+      "customProperties": true
+    },
+    "themes": {
+      "light": {
+        "primary": "#38414D",
+        "secondary": "#3E6499",
+        "accent": "#2694CA",
+        "error": "#FF5252",
+        "info": "#269ABC",
+        "success": "#278400",
+        "warning": "#FFC107"
+      }
+    }
+  }
+}
