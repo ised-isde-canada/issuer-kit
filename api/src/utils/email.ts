@@ -15,7 +15,7 @@ export async function sendEmail(context: HookContext) {
 
     console.log(`This is the relationship  ${context.data.data.relationship}`);
   const settings = context.app.get("emailSettings");
-  if(!${context.data.data.relationship}){
+  if (!context.data.data.relationship){
     const inviteUrl = `${context.app.get("publicSite").url}/?invite_token=${
       context.result.token
     }`;
@@ -33,7 +33,7 @@ export async function sendEmail(context: HookContext) {
   // Replace variables in email template with provided context from configuration
   const emailBody = inject(emailBodyTemplate, settings);
 
-  if(!${context.data.data.relationship}){
+  if (!context.data.data.relationship) {
   const email = {
     to: context.data.email,
     subject: settings.subject,
