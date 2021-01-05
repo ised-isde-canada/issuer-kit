@@ -1,0 +1,49 @@
+{
+  "host": "localhost",
+  "port": "PORT",
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": {
+    "host": "DB_SERVICE",
+    "db": "DB_NAME",
+    "port": "DB_PORT",
+    "user": "DB_USER",
+    "password": "DB_PASSWORD"
+  },
+  "agent": {
+    "adminUrl": "AGENT_ADMIN_URL",
+    "adminApiKey": "AGENT_ADMIN_API_KEY"
+  },
+ "smtp": {
+    "host": "SMTP_HOST",
+    "port": "SMTP_PORT",
+    "secure": false,
+    "auth": {
+    "user": "SMTP_USER",
+    "pass": "SMTP_PASSWORD"
+    },
+    "tls": {
+      "rejectUnauthorized": false
+    }
+  },
+  "emailSettings": {
+    "sender": "ADMIN_EMAIL",
+    "subject": "EMAIL_SUBJECT"
+  },
+  "publicSite": {
+    "url": "PUBLIC_SITE_URL"
+  },
+  "issuer": {
+    "name": "Issuer Name",
+    "offerComment": "Credential offer from Issuer Name",
+    "validityDays": -1,
+    "multiUse": true
+  },
+  "authentication":{
+    "jwksUri": "https://sso-demo.ised-isde.canada.ca/auth/realms/individual/protocol/openid-connect/certs",
+    "algorithms": ["RS256"]
+  }
+}

@@ -1,7 +1,4 @@
 <style scoped lang="scss">
-.claim-name {
-  font-style: italic;
-}
 
 .claim-value {
   font-weight: bold;
@@ -16,6 +13,11 @@ label.v-label.theme--light {
 .v-icon {
   margin-bottom: 3px;
 }
+
+.v-application .mx-3.claim-value {
+    margin-left: 0px !important;
+    white-space: normal !important;
+}
 </style>
 
 <template>
@@ -29,7 +31,7 @@ label.v-label.theme--light {
               <v-list-item-title>
                 <v-row align="center" justify="space-around">
                   <v-col cols="4">
-                    <span class="mx-3 claim-name">{{ item.name }}</span>
+                    <span class="mx-3 claim-name">{{ item.title }}</span>
                   </v-col>
                   <v-col cols="2">
                     <v-icon small class="mx-3">fas fa-arrow-right</v-icon>
