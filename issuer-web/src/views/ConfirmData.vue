@@ -31,7 +31,7 @@ label.v-label.theme--light {
               <v-list-item-title>
                 <v-row align="center" justify="space-around">
                   <v-col cols="4">
-                    <span class="mx-3 claim-name">{{ item.title }}</span>
+                    <span class="mx-3 claim-name">{{ item.name }}</span>
                   </v-col>
                   <v-col cols="2">
                     <v-icon small class="mx-3">fas fa-arrow-right</v-icon>
