@@ -28,7 +28,7 @@
               outlined
               color="success"
               :disabled="!confirmed"
-              :to="{ path: 'credential-data' }"
+              :to="{ path: 'confirm-data' }"
               >Agree</v-btn>
           </v-col>
         </v-row>
