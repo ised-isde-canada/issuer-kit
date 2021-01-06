@@ -29,12 +29,14 @@ export async function sendEmail(context: HookContext) {
   }
 
  // add to default object used for string replacement
+
+   let emailBodyTemplate;
    if (!context.data.data.relationship){
-  const emailBodyTemplate = loadFileAsText(
-    settings.emailTemplate || "invite-email.html"
-  );
-}else{
-  const emailBodyTemplate = loadFileAsText(
+     emailBodyTemplate = loadFileAsText(
+     settings.emailTemplate || "invite-email.html"
+     );
+   } else{
+    emailBodyTemplate = loadFileAsText(
     settings.emailTemplate || "invite-email-vr.html"
   );
 }
