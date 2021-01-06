@@ -12,7 +12,7 @@ All files inside the `public` folder can be overridden at deployment time: in th
 
 ##### UI Theme
 
-The UI theme for the web application can be lightly customized by tweaking the configuration in `config/vuetify.json`. The contents of this file are Vuetify heme configurations and will allow you to change the base color scheme for the app, as well as some other settings. Please refer to the [Vuetify docs](https://vuetifyjs.com/en/customization/theme/#theme) for further details. 
+The UI theme for the web application can be lightly customized by tweaking the configuration in `config/vuetify.json`. The contents of this file are Vuetify heme configurations and will allow you to change the base color scheme for the app, as well as some other settings. Please refer to the [Vuetify docs](https://vuetifyjs.com/en/customization/theme/#theme) for further details.
 
 Additionally, `favicon.ico` and `logo.svg` can be replaced to customize the browser favorite icon for the webapp and the SVG logo appearing in the header of the webapp.
 
@@ -30,7 +30,7 @@ The contents of the file will be displayed below the generic unauthorized messag
 
 Similarly to the `unauthorized.html` configuration file we discussed earlier, `terms-and-confitions.html` defines custom HTML/CSS that will be injected in the main landing page for the issuer webapp. This can be used to add a welcome message or a disclaimer.
 
-#### Dynamic Form Configuration
+#### Dynamic Form Configuration 
 
 Both the admin and issuer webapp use [SurveyJS](https://surveyjs.io) to display forms that are dynamically generated from the configuration file referenced below.
 
@@ -50,7 +50,7 @@ Both the admin and issuer webapp use [SurveyJS](https://surveyjs.io) to display 
 
 * `authentication`:
   * `enabled`: defines wether the OIDC plugin should be enabled, thus requiring successful authentication via the specified Identity Provider in order to access the application.
-  
+
   * `oidcSettings`:  settings for the OIDC client. Details can be found in the [library docs](https://github.com/IdentityModel/oidc-client-js/wiki).
 
 * `apiServer`: an object containing configuration details for the API server used by the web application. Currently only the `url` endpoint is used, and it's value changed between production mode and local development mode.
