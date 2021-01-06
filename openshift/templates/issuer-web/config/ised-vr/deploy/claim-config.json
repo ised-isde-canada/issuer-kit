@@ -7,6 +7,7 @@
       "title": "Corporation Number:",
       "placeHolder": "",
       "isRequired": true,
+      "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
@@ -15,6 +16,7 @@
       "title": "Business Number:",
       "placeHolder": "",
       "isRequired": true,
+      "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
@@ -24,6 +26,7 @@
       "title": "Corporation Name:",
       "placeHolder": "",
       "isRequired": true,
+      "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
@@ -33,6 +36,7 @@
       "title": "Relationship:",
       "placeHolder": "",
       "isRequired": true,
+      "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
@@ -42,6 +46,7 @@
       "title": "First Name:",
       "placeHolder": "",
       "isRequired": true,
+      "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
@@ -51,6 +56,7 @@
       "title": "Last Name:",
       "placeHolder": "",
       "isRequired": true,
+      "readOnly": true,
       "requiredErrorText": "Required Field"
     }
 ],

@@ -30,13 +30,17 @@
     }
   },
   "emailSettings": {
-    "sender": "ADMIN_EMAIL",
-    "subject": "EMAIL_SUBJECT"
-  },
-  "publicSite": {
-    "url": "PUBLIC_SITE_URL"
-  },
-  "issuer": {
+       "sender": "ADMIN_EMAIL",
+       "subject": "EMAIL_SUBJECT",
+       "subjectVR": "EMAIL_SUBJECT_VR"
+   },
+   "publicSite": {
+       "url": "PUBLIC_SITE_URL"
+   },
+   "publicSiteVR": {
+       "url": "PUBLIC_SITE_URL_VR"
+   },
+   "issuer": {
     "name": "Issuer Name",
     "offerComment": "Credential offer from Issuer Name",
     "validityDays": -1,

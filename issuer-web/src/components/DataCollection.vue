@@ -18,7 +18,10 @@
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">Enter your information</h2>
+    <h2 class="text-center">These are the details of the credential
+     that you are being offered. If you dont agree with this data, please
+     call 1-800-345-1235 or email credexchange@corpcan.ca to highlight
+     inconsistencies in the data. If you do agree then click next.</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
         <survey :survey="survey" :key="surveyKey"></survey>
@@ -62,7 +65,9 @@ export default class DataCollection extends Vue {
       this.$store.commit("credential/updateClaims", credentialClaims);
 
       // Go to next page on successful completion
-      this.$router.push({ path: "confirm-data" });
+    //this.$router.push({ path: "confirm-data" });
+        this.$router.push({ path: "connect" });
+      //'connect'
     });
 
     this.refreshSurvey();

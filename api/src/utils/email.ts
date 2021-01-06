@@ -29,9 +29,17 @@ export async function sendEmail(context: HookContext) {
   }
 
  // add to default object used for string replacement
-  const emailBodyTemplate = loadFileAsText(
-    settings.emailTemplate || "invite-email.html"
+
+   let emailBodyTemplate;
+   if (!context.data.data.relationship){
+     emailBodyTemplate = loadFileAsText(
+     settings.emailTemplate || "invite-email.html"
+     );
+   } else{
+    emailBodyTemplate = loadFileAsText(
+    settings.emailTemplate || "invite-email-vr.html"
   );
+}
 
   // Replace variables in email template with provided context from configuration
   const emailBody = inject(emailBodyTemplate, settings);
