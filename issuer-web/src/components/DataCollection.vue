@@ -11,20 +11,42 @@
 }
 
 .sv_main .sv_container .sv_body .sv_nav .sv_complete_btn {
-  background-color: var(--v-secondary-base);
+  background-color: var(--v-success-base);
   margin-bottom: 20px;
 }
 </style>
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">These are the details of the credential
-     that you are being offered. If you dont agree with this data, please
-     call 1-800-345-1235 or email credexchange@corpcan.ca to highlight
-     inconsistencies in the data. If you do agree then click next.</h2>
+    <h2 class="text-center">Organization information</h2>
+    <p>If the data is incorrect, please call 1-800-345-1235 or email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
         <survey :survey="survey" :key="surveyKey"></survey>
+
+        <v-list disabled>
+          <v-list-item-group color="primary">
+            <v-list-item v-for="(item, i) in claims" :key="i">
+              <v-list-item-content>
+                <v-list-item-title>
+                  <v-row align="center" justify="space-around">
+                    <v-col cols="4">
+                      <span class="mx-3 claim-name">{{ item.name }}</span>
+                    </v-col>
+                    <v-col cols="2">
+                      <v-icon small class="mx-3">fas fa-arrow-right</v-icon>
+                    </v-col>
+                    <v-col cols="4">
+                      <span class="mx-3 claim-value">{{ item.value }}</span>
+                    </v-col>
+                  </v-row>
+                </v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+
+
       </v-container>
     </v-card>
   </v-container>
@@ -56,7 +78,7 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
-    this.survey.completeText = "NEXT";
+    this.survey.completeText = "Confirm and request credential";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {
@@ -139,6 +161,21 @@ export default class DataCollection extends Vue {
       // eslint-disable-line
       SurveyVue.FunctionFactory.Instance.register(f.name, f);
     });
+  }
+}
+</script>
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import { Claim } from "../models/credential";
+
+@Component
+export default class ConfirmData extends Vue {
+  private claims!: Array<Claim>;
+  private confirmed = false;
+
+  created() {
+    const credential = this.$store.getters["credential/getCredential"];
+    this.claims = credential.claims;
   }
 }
 </script>

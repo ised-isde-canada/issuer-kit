@@ -2,14 +2,14 @@
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">Issuing credential</h2>
+    <h2 class="text-center">Issuing federal corporation relationship credential</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
 
       <v-container class="progress-steps mrgn-tp-md">
         <v-row>
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-wifi</v-icon>
-            Connected to Corporations issuer agent
+            Connected to Corporations Canada issuer agent
           </v-col>
         </v-row>
         <v-row v-if="!issued">
@@ -28,13 +28,13 @@
         <v-row v-if="issued">
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-handshake</v-icon>
-            You accepted the credential offer.
+            You accepted the relationship credential offer.
           </v-col>
         </v-row>
         <v-row v-if="issued">
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-check-circle</v-icon>
-            Your credential has been issued!
+            Your federal corporation relationship credential has been issued!
           </v-col>
         </v-row>
       </v-container>
@@ -42,7 +42,8 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p class="text-center text-success"><strong>Congratulations, your credential has been issued!</strong></p>
+        <p class="text-center text-success"><strong>Congratulations, your federal corporation relationship credential has been issued!</strong></p>
+        <p class="text-center text-success"> Ensure you also complete the second email sent to get a federal corporation credential.</p>
       </v-container>
     </v-card>
   </v-container>
