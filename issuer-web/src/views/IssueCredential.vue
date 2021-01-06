@@ -34,8 +34,7 @@
         <v-row v-if="issued">
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-check-circle</v-icon>
-            Your federal corporation relationship credential has been issued!<br><br>
-            Ensure you also complete the second email sent to get a federal corporation credential.
+            Your federal corporation relationship credential has been issued!
           </v-col>
         </v-row>
       </v-container>
@@ -43,7 +42,8 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p class="text-center text-success"><strong>Congratulations, your credential has been issued!</strong></p>
+        <p class="text-center text-success"><strong>Congratulations, your federal corporation relationship credential has been issued!</strong></p>
+        <p class="text-center text-success"> Ensure you also complete the second email sent to get a federal corporation credential.</p>
       </v-container>
     </v-card>
   </v-container>
