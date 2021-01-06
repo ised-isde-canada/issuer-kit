@@ -19,9 +19,9 @@
 <template>
   <v-container fluid>
     <h2 class="text-center">Organization information</h2>
-    <p>If the data is incorrect, please call 1-800-345-1235 or email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
+        <p class="text-center">If the data is incorrect, please call 1-800-345-1235 or <br>email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
         <survey :survey="survey" :key="surveyKey"></survey>
       </v-container>
     </v-card>
