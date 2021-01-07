@@ -63,7 +63,7 @@ export default class DataCollection extends Vue {
       this.$store.commit("credential/updateClaims", credentialClaims);
 
       // Go to next page on successful completion
-    //this.$router.push({ path: "confirm-data" });
+        //this.$router.push({ path: "confirm-data" });
         this.$router.push({ path: "connect" });
       //'connect'
     });
