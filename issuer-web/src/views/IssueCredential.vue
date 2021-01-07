@@ -42,7 +42,8 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        {{ successText }}
+      <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong> Ensure you also complete the second email sent to get a federal corporation credential.</p>
+
       </v-container>
     </v-card>
   </v-container>
