@@ -23,7 +23,7 @@
   },
   "issuedSuccess": {
     "successText": "federal corporation relationship credential",
-    "links": []
+    "links": ["federal corporation credential"]
   },
   "credentials": {
      "schema_id": "7cTuxo7KuS7uTPQ9ua9kQE:2:Verified Relationship:0.1"
