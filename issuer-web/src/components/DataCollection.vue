@@ -21,7 +21,7 @@
     <h2 class="text-center">Organization information</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
-        <p class="text-center">If the data is incorrect, please call 1-800-345-1235 or <br>email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
+        <p class="text-center mrgn-tp-lg">If the data is incorrect, please call 1-800-345-1235 or <br>email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
         <survey :survey="survey" :key="surveyKey"></survey>
       </v-container>
     </v-card>
@@ -54,7 +54,7 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
-    this.survey.completeText = "Confirm and request credential";
+    this.survey.completeText = "CONFIRM AND REQUEST CREDENTIAL";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();
       Object.keys(result.data).forEach(key => {
