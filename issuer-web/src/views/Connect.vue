@@ -16,7 +16,7 @@
       </p>
 
       <p>
-        Once a connection is established and you present it on your digital wallet, it will issue you your federal Corporation relationship credential.
+        Once a connection is established and you present it on your digital wallet, it will issue you your {{successText}}.
       </p>
 
       <v-progress-circular
@@ -59,6 +59,7 @@ import { Component, Vue } from "vue-property-decorator";
 import QRCode from "@/components/QRCode.vue";
 import { Connection, ConnectionStatus } from "../models/connection";
 import Axios, { CancelTokenSource } from "axios";
+import { AppConfig, Configuration } from "../models/appConfig";
 
 @Component({ components: { QRCode } })
 export default class Connect extends Vue {
@@ -67,6 +68,7 @@ export default class Connect extends Vue {
   private width!: number;
   private qrKey = 0;
   private cancelTokenSource!: CancelTokenSource;
+  private successText = "";
 
   created() {
     this.width = 300;
@@ -82,6 +84,13 @@ export default class Connect extends Vue {
           window.location.origin + "?c_i=" + this.base64Invitation;
         this.qrKey += 1; // force refresh of qrcode component
       });
+  }
+
+  mounted() {
+    const appConfig = this.$store.getters[
+      "configuration/getConfiguration"
+    ] as Configuration;
+    this.successText = appConfig.app.issuedSuccess.successText;
   }
 
   updated() {
