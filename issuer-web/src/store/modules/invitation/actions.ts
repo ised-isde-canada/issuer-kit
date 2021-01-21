@@ -31,6 +31,15 @@ export const actions: ActionTree<InvitationState, RootState> = {
     return new Promise<boolean>(resolve => {
       let isValid = false;
       const token = route.query.invite_token as string;
+      // H.N change
+      const token_oth = route.query.invite_token_oth as string;
+      if(token_oth)
+      {
+        localStorage.setItem(
+          "token_oth",
+          token_oth
+        );
+      }
       const invitation = new Invitation();
 
       if (!token) {

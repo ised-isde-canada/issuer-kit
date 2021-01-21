@@ -45,6 +45,9 @@
       <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
 
       </v-container>
+        <v-row v-if="voflow">
+          <a v-bind:href="{{otherUrl}}"> Start your VR flow </a>
+         </v-row>
     </v-card>
   </v-container>
 </template>
@@ -65,6 +68,8 @@ export default class Connect extends Vue {
   private successLinks = new Array<any>();
   private cancelTokenSource!: CancelTokenSource;
   private idToken!: string;
+  private otherUrl= "";
+  private voflow = false;
 
   created() {
     this.cancelTokenSource = Axios.CancelToken.source();
@@ -77,6 +82,13 @@ export default class Connect extends Vue {
     ] as Configuration;
     this.successText = appConfig.app.issuedSuccess.successText;
     this.successLinks = appConfig.app.issuedSuccess.links;
+    if(this.successLinks.length > 1)
+    {
+      this.voflow = true;
+      this.otherUrl = this.successLinks[1]+'?invite_token='+localStorage.getItem('token_oth');
+    }
+
+
     this.requestCredentialIssuance(appConfig.app).then(result => {
       this.handleIssueCredential(
         result.data.credential_exchange_id,
