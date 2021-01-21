@@ -45,9 +45,12 @@
       <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
 
       </v-container>
-        <v-row v-if="voflow">
-          <a v-bind:href="{{otherUrl}}"> Start your VR flow </a>
-         </v-row>
+
+      <v-container fluid v-if="voflow">
+      <p class="text-center text-success"><strong>Congratulations, your   {{ otherUrl }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
+
+
+         </v-container>
     </v-card>
   </v-container>
 </template>
