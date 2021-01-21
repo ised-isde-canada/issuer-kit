@@ -85,7 +85,7 @@ export default class Connect extends Vue {
     if(this.successLinks.length > 1)
     {
       this.voflow = true;
-      this.otherUrl = this.successLinks[1]+'?invite_token='+localStorage.getItem('token_oth');
+      this.otherUrl = this.successLinks[1] + '?invite_token=' + localStorage.getItem('token_oth');
     }
 
 
