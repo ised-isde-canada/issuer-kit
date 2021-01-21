@@ -13,7 +13,10 @@ import {
 } from "../../utils/hooks";
 
 async function sendEmailIfRequired(context: HookContext) {
-  if (!context.data.issued && !context.data.expired) {
+
+  // change for suppressing email when we are dealing with VR
+  if (!context.data.issued && !context.data.expired && !context.data.data.relationship) {
+//  if (!context.data.issued && !context.data.expired) {
     return sendEmail(context);
   }
   return context;
