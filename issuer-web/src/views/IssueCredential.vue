@@ -47,8 +47,9 @@
       </v-container>
 
       <v-container fluid v-if="voflow">
-      <a href="{{otherUrl}}"> Get your VR</a>
-    
+      <a :href="otherUrl" aria-label="Next">Get Your VR</a>
+      
+
 
 
          </v-container>
