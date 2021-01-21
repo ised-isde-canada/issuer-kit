@@ -47,7 +47,8 @@
       </v-container>
 
       <v-container fluid v-if="voflow">
-      <p class="text-center text-success"><strong>Congratulations, your   {{ otherUrl }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
+      <a href="{{otherUrl}}"> Get your VR</a>
+    
 
 
          </v-container>
