@@ -48,7 +48,7 @@
 
       <v-container fluid v-if="voflow">
       <a :href="otherUrl" aria-label="Next">Get Your VR</a>
-      
+
 
 
 
@@ -101,7 +101,12 @@ export default class Connect extends Vue {
       ).then(() => {
         this.issued = true;
         // silently sign out of the app
-        this.$store.dispatch("oidcStore/signOutOidcSilent");
+        // H.N change ..only after VR
+        if(!this.voflow){
+         this.$store.dispatch("oidcStore/signOutOidcSilent");
+        }
+
+
 
         // remove data from localStorage
         localStorage.removeItem("issuer-invitation");
