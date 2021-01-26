@@ -120,10 +120,6 @@ export default class Connect extends Vue {
         if(!this.voflow){
          this.$store.dispatch("oidcStore/signOutOidcSilent");
         }
-      
-
-
-
         // remove data from localStorage
         localStorage.removeItem("issuer-invitation");
       });
