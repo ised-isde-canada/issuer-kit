@@ -47,9 +47,10 @@
 
       <v-container fluid v-if="voflow && issued">
 
-      
+      <a :href="otherUrl" aria-label="Next">YES</a>
+      <a :href="corpcanUrl" aria-label="Next">NO</a>
 
-
+          <!-- Modal pop up needs to be fixed or external js, needs to be added -->
          <div class="modal fade" id="addon_modal" tabindex="-1" role="dialog">
       <div class="modal-dialog">
          <div class="modal-content">
