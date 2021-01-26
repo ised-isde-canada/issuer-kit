@@ -42,17 +42,32 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-      <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
+        <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
+     </v-container>
+
+      <v-container fluid v-if="voflow && issued">
+        <!-- <a :href="otherUrl" aria-label="Next">Get Your VR</a> -->
+
+        <v-row class="mx-4">
+          <v-col cols="12">
+            <v-checkbox
+              v-model="getvr"
+              color="success"
+              label="Proceed to process VR credential."
+            ></v-checkbox>
+          </v-col>
+        </v-row>
+        <v-row class="mx-4" justify="end">
+          <v-col cols="12" md="2">
+          <a v-if="getvr" :href="otherUrl" target="_blank">Proceed to Obtain your VR</a>
+  <span v-else>This concludes your credential issuing process</span>
+
+
+          </v-col>
+        </v-row>
+
 
       </v-container>
-
-      <v-container fluid v-if="voflow">
-      <a :href="otherUrl" aria-label="Next">Get Your VR</a>
-
-
-
-
-         </v-container>
     </v-card>
   </v-container>
 </template>
