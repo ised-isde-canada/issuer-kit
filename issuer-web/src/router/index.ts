@@ -17,9 +17,11 @@ function router(config: AppConfig): VueRouter {
     {
       path: "/",
       name: "Home",
-      component: () =>
-        import(/* webpackChunkName: "data-entry" */ "../views/DataEntry.vue"),
-        beforeEnter: validToken
+      component: Home,
+      meta: {
+       isPublic: true
+      },
+      beforeEnter: validToken
     },
     {
       // required for backwards compatibility with old issuer app
