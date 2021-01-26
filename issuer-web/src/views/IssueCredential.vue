@@ -46,16 +46,27 @@
      </v-container>
 
 
-      <div>
-         <b-modal ref="my-modal" hide-footer title="Verified Relationship Flow">
-           <div class="d-block text-center">
-             <h3>Would you like to process the VR?</h3>
-           </div>
-           <b-button class="mt-3" variant="outline-danger" block @click="hideModal">Close Me</b-button>
-          <a :href="otherUrl" aria-label="Next">YES</a>
-         </b-modal>
-      </div>
-      
+
+
+
+         <v-container fluid v-if="issued && voflow ">
+        <div>
+            <div>
+               <h4 class="text-center">Verified Relationship Flow</h4>
+            </div>
+            <div >
+                <p>Would you like to process your Verified Relationship Credential?</p>
+            </div>
+            <div>
+                <a :href="otherUrl" aria-label="Next">YES</a> <br>
+                <a :href="corpcanUrl" aria-label="Next">NO</a>
+            </div>
+        </div>
+        </v-container>
+
+
+
+
     </v-card>
   </v-container>
 </template>
@@ -126,13 +137,7 @@ export default class Connect extends Vue {
     this.cancelTokenSource.cancel();
   }
 
-  showModal() {
-        this.$refs['my-modal'].show()
-      }
 
-      hideModal() {
-        this.$refs['my-modal'].hide()
-      }
 
   async handleIssueCredential(credExId: string, config: AppConfig) {
     const retryInterceptor = Axios.interceptors.response.use(
