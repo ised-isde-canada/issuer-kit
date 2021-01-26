@@ -120,9 +120,7 @@ export default class Connect extends Vue {
         if(!this.voflow){
          this.$store.dispatch("oidcStore/signOutOidcSilent");
         }
-        else{
-          this.showModal();
-        }
+      
 
 
 
