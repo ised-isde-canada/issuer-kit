@@ -42,34 +42,20 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong> Ensure you also complete the second email sent to get a {{successLinks[0]}}.</p>
+        <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong></p>
      </v-container>
 
-      <v-container fluid v-if="voflow && issued">
 
-      <a :href="otherUrl" aria-label="Next">YES</a>
-      <a :href="corpcanUrl" aria-label="Next">NO</a>
-
-          <!-- Modal pop up needs to be fixed or external js, needs to be added -->
-         <div class="modal fade" id="addon_modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-         <div class="modal-content">
-             <div class="modal-header">
-                <h4 class="modal-title text-center">Verified Relationship Flow</h4>
-             </div>
-             <div class="modal-body">
-                 <p>Would you like to process your Verified Relationship Creddential?</p>
-             </div>
-             <div class="modal-footer">
-                 <a :href="otherUrl" aria-label="Next">YES</a>
-                 <a :href="corpcanUrl" aria-label="Next">NO</a>
-             </div>
-         </div>
-       </div>
-     </div>
-
-
-      </v-container>
+      <div>
+         <b-modal ref="my-modal" hide-footer title="Verified Relationship Flow">
+           <div class="d-block text-center">
+             <h3>Would you like to process the VR?</h3>
+           </div>
+           <b-button class="mt-3" variant="outline-danger" block @click="hideModal">Close Me</b-button>
+          <a :href="otherUrl" aria-label="Next">YES</a>
+         </b-modal>
+      </div>
+      
     </v-card>
   </v-container>
 </template>
@@ -123,6 +109,9 @@ export default class Connect extends Vue {
         if(!this.voflow){
          this.$store.dispatch("oidcStore/signOutOidcSilent");
         }
+        else{
+          this.showModal();
+        }
 
 
 
@@ -136,6 +125,14 @@ export default class Connect extends Vue {
     // cancelling pending requests, if any
     this.cancelTokenSource.cancel();
   }
+
+  showModal() {
+        this.$refs['my-modal'].show()
+      }
+
+      hideModal() {
+        this.$refs['my-modal'].hide()
+      }
 
   async handleIssueCredential(credExId: string, config: AppConfig) {
     const retryInterceptor = Axios.interceptors.response.use(
