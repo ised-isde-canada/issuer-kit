@@ -46,25 +46,26 @@
      </v-container>
 
       <v-container fluid v-if="voflow && issued">
-        <!-- <a :href="otherUrl" aria-label="Next">Get Your VR</a> -->
 
-        <v-row class="mx-4">
-          <v-col cols="12">
-            <v-checkbox
-              v-model="getvr"
-              color="success"
-              label="Proceed to process VR credential."
-            ></v-checkbox>
-          </v-col>
-        </v-row>
-        <v-row class="mx-4" justify="end">
-          <v-col cols="12" md="2">
-          <a v-if="getvr" :href="otherUrl" target="_blank">Proceed to Obtain your VR</a>
-  <span v-else>This concludes your credential issuing process</span>
+      
 
 
-          </v-col>
-        </v-row>
+         <div class="modal fade" id="addon_modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                <h4 class="modal-title text-center">Verified Relationship Flow</h4>
+             </div>
+             <div class="modal-body">
+                 <p>Would you like to process your Verified Relationship Creddential?</p>
+             </div>
+             <div class="modal-footer">
+                 <a :href="otherUrl" aria-label="Next">YES</a>
+                 <a :href="corpcanUrl" aria-label="Next">NO</a>
+             </div>
+         </div>
+       </div>
+     </div>
 
 
       </v-container>
@@ -90,6 +91,7 @@ export default class Connect extends Vue {
   private idToken!: string;
   private otherUrl= "";
   private voflow = false;
+  private corpcanUrl = "https://corporationscanada.ic.gc.ca/eic/site/cd-dgc.nsf/eng/home";
 
   created() {
     this.cancelTokenSource = Axios.CancelToken.source();
