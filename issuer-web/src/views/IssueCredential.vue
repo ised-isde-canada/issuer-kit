@@ -42,17 +42,14 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p class="text-center text-success"><strong>{{ successText }}</strong></p>
-     </v-container>
+             <p class="text-center text-success mrgn-bttm-md"><strong>You have obtained your {{ successText }}! You should now have the credential in your wallet.</strong></p>
+      </v-container>
 
-
-         <v-container fluid v-if="issued && voflow ">
-               <p class="text-center text-success mrgn-bttm-md"><strong>Please continue to get your federal corporation relationship credential.</strong></p>
-                <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a> -->
-                <a class="btn btn-success pull-right" :href="otherUrl" aria-label="Next">CONTINUE</a>
-        </v-container>
-
-
+      <v-container fluid v-if="issued && voflow ">
+             <p class="text-center text-success mrgn-bttm-md"><strong>Please continue to get your federal corporation relationship credential.</strong></p>
+             <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a> -->
+             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE</a>
+      </v-container>
 
 
     </v-card>
