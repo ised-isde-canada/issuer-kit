@@ -22,7 +22,7 @@
   "url": "https://identity-kit-controllerised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca"
   },
   "issuedSuccess": {
-    "successText": "Congratulations, your federal corporation relationship credential has been issued! <br>You should now have two credentials in your wallet.",
+    "successText": "Congratulations, your federal corporation relationship credential has been issued! You should now have two credentials in your wallet.",
     "links": ["federal corporation credential"]
   },
   "credentials": {

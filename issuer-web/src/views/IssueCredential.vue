@@ -46,22 +46,10 @@
      </v-container>
 
 
-
-
-
          <v-container fluid v-if="issued && voflow ">
-        <div>
-            <div>
-               <h4 class="text-center">Verified Relationship Flow</h4>
-            </div>
-            <div >
-                <p>Would you like to process your Verified Relationship Credential?</p>
-            </div>
-            <div>
-                <a :href="otherUrl" aria-label="Next">YES</a> <br>
-                <a :href="corpcanUrl" aria-label="Next">NO</a>
-            </div>
-        </div>
+               <p class="text-center text-success mrgn-bttm-md"><strong>Please continue to get your federal corporation relationship credential.</strong></p>
+                <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a> -->
+                <a class="btn btn-success pull-right" :href="otherUrl" aria-label="Next">CONTINUE</a>
         </v-container>
 
 
