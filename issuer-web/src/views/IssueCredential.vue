@@ -42,7 +42,7 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong></p>
+        <p class="text-center text-success"><strong>{{ successText }}</strong></p>
      </v-container>
 
 
