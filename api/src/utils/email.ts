@@ -19,7 +19,7 @@ export async function sendEmail(context: HookContext) {
   if (!context.data.data.relationship){
     const inviteUrl = `${context.app.get("publicSite").url}/?invite_token=${
       context.result.token
-    }&invite_token_oth=${context.data.data.vrtoken}`;
+    }&invite_token_oth=${context.data.data.vrToken}`;
       settings.inviteUrl = inviteUrl;
   } else {
     const  inviteUrl = `${context.app.get("publicSiteVR").url}/?invite_token=${
