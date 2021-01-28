@@ -46,9 +46,8 @@
       </v-container>
 
       <v-container fluid v-if="issued && voflow ">
-             <p class="text-center text-success mrgn-bttm-md"><strong>Please continue to get your federal corporation relationship credential.</strong></p>
              <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a> -->
-             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE</a>
+             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE TO GET YOUR RELATIONSHIP CREDENTIAL</a>
       </v-container>
 
 
