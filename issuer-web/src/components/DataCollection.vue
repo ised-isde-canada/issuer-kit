@@ -103,8 +103,8 @@ export default class DataCollection extends Vue {
   private valuesFromInvitation(): void {
     const invitation = this.$store.getters[
       "invitation/getInvitation"
-    ] as Invitation;
-    if(invitation.data.hasOwnProperty("relationship")){
+    ] as Invitation;{
+    if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")){
       this.entity = "Relationship";
     }
     else{
