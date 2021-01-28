@@ -42,29 +42,13 @@
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
       <v-container fluid v-if="issued">
-        <p class="text-center text-success"><strong>Congratulations, your   {{ successText }}  has been issued!</strong></p>
-     </v-container>
+             <p class="text-center text-success mrgn-bttm-md"><strong>You have obtained your {{ successText }}! You should now have the credential in your wallet.</strong></p>
+      </v-container>
 
-
-
-
-
-         <v-container fluid v-if="issued && voflow ">
-        <div>
-            <div>
-               <h4 class="text-center">Verified Relationship Flow</h4>
-            </div>
-            <div >
-                <p>Would you like to process your Verified Relationship Credential?</p>
-            </div>
-            <div>
-                <a :href="otherUrl" aria-label="Next">YES</a> <br>
-                <a :href="corpcanUrl" aria-label="Next">NO</a>
-            </div>
-        </div>
-        </v-container>
-
-
+      <v-container fluid v-if="issued && voflow ">
+             <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a> -->
+             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE TO GET YOUR RELATIONSHIP CREDENTIAL</a>
+      </v-container>
 
 
     </v-card>
