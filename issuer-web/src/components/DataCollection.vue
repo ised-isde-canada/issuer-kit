@@ -18,7 +18,7 @@
 
 <template>
   <v-container fluid>
-    <h2 class="text-center">Organization information</h2>
+    <h2 class="text-center">{{ entity }} information</h2>
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
         <p class="text-center mrgn-tp-lg">If the data is incorrect, please call 1-800-345-1235 or <br>email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
@@ -44,6 +44,7 @@ export default class DataCollection extends Vue {
   @Prop({ default: "default" }) private themeName!: string;
   private survey = new SurveyVue.Model();
   private surveyKey = 0;
+  private entity = "";
 
   created() {
     SurveyVue.StylesManager.applyTheme(this.themeName);
@@ -103,6 +104,12 @@ export default class DataCollection extends Vue {
     const invitation = this.$store.getters[
       "invitation/getInvitation"
     ] as Invitation;
+    if(invitation.data.hasOwnProperty("relationship")){
+      this.entity = "Relationship";
+    }
+    else{
+      this.entity = "Organization";
+    }
     if (invitation.data) {
       Object.entries(invitation.data).forEach(([key, value]) => {
         this.setField(key, value as string, true);
