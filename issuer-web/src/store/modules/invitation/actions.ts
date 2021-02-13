@@ -33,13 +33,17 @@ export const actions: ActionTree<InvitationState, RootState> = {
       const token = route.query.invite_token as string;
       // H.N change
       const tokenOth = route.query.invite_token_oth as string;
-      if(tokenOth)
-      {
+      if(tokenOth){
         localStorage.setItem(
           "tokenOth",
           tokenOth
         );
       }
+      const establishedConnectionId = route.query.connection as string;
+      if(establishedConnectionId){
+        localStorage.setItem("establishedConnectionId",establishedConnectionId);
+      }
+
       const invitation = new Invitation();
 
       if (!token) {

@@ -63,10 +63,19 @@ export default class DataCollection extends Vue {
       });
       this.$store.commit("credential/updateClaims", credentialClaims);
 
-      // Go to next page on successful completion
-        //this.$router.push({ path: "confirm-data" });
+      //Go to next page on successful completion
+      //Changes by H.N
+      //In both cases we are bypassing confirm data as well
+      //In case the connection has been established we are by bypassing
+      //the connect as well
+      //this.$router.push({ path: "confirm-data" });
+    if(localStorage.getItem("establishedConnectionId")){
+        this.$router.push({ path: "issue-credential" });
+     }
+    else {
+        //'connect'
         this.$router.push({ path: "connect" });
-      //'connect'
+     }
     });
 
     this.refreshSurvey();
@@ -104,7 +113,7 @@ export default class DataCollection extends Vue {
     const invitation = this.$store.getters[
       "invitation/getInvitation"
     ] as Invitation;
-    
+
     if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")) {
       this.entity = "Relationship";
     }

@@ -86,10 +86,13 @@ export default class Connect extends Vue {
     ] as Configuration;
     this.successText = appConfig.app.issuedSuccess.successText;
     this.successLinks = appConfig.app.issuedSuccess.links;
-    if(this.successLinks.length > 1)
-    {
+    if(this.successLinks.length > 1){
       this.voflow = true;
-      this.otherUrl = this.successLinks[1] + '?invite_token=' + localStorage.getItem("tokenOth");
+      const connectionForVR = (await this.$store.getters[
+        "connection/getConnection"
+      ]) as Connection;
+      this.otherUrl = this.successLinks[1] + '?invite_token=' + localStorage.getItem("tokenOth")
+      + '&connection=' + connectionForVR.id;
     }
 
 
@@ -155,25 +158,40 @@ export default class Connect extends Vue {
       "credential/getCredential"
     ]) as Credential;
 
-    console.log("these are the claims" + credential.claims);
-    const connection = (await this.$store.getters[
-      "connection/getConnection"
-    ]) as Connection;
     const invitation = this.$store.getters[
       "invitation/getInvitation"
     ] as Invitation;
-    const data = {
-      token: invitation.token,
-      connection_id: connection.id, // eslint-disable-line @typescript-eslint/camelcase
-      claims: credential.claims,
-      schema_id: config.credentials?.schema_id // eslint-disable-line @typescript-eslint/camelcase
-    };
-    return Axios.post(`${config.apiServer.url}/credential-exchange/`, data, {
-      cancelToken: this.cancelTokenSource.token,
-      headers: {
-        authorization: `Bearer ${this.idToken}`
-      }
-    });
+
+    if(localStorage.getItem("establishedConnectionId")){
+      const data = {
+        token: invitation.token,
+        connection_id: localStorage.getItem("establishedConnectionId"), // eslint-disable-line @typescript-eslint/camelcase
+        claims: credential.claims,
+        schema_id: config.credentials?.schema_id // eslint-disable-line @typescript-eslint/camelcase
+      };
+      return Axios.post(`${config.apiServer.url}/credential-exchange/`, data, {
+        cancelToken: this.cancelTokenSource.token,
+        headers: {
+          authorization: `Bearer ${this.idToken}`
+        }
+      });
+    } else {
+        const connection = (await this.$store.getters[
+          "connection/getConnection"
+        ]) as Connection;
+        const data = {
+        token: invitation.token,
+        connection_id: connection.id, // eslint-disable-line @typescript-eslint/camelcase
+        claims: credential.claims,
+        schema_id: config.credentials?.schema_id // eslint-disable-line @typescript-eslint/camelcase
+      };
+      return Axios.post(`${config.apiServer.url}/credential-exchange/`, data, {
+        cancelToken: this.cancelTokenSource.token,
+        headers: {
+          authorization: `Bearer ${this.idToken}`
+        }
+      });
+    }
   }
 }
 </script>
