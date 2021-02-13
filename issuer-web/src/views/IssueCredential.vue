@@ -88,9 +88,9 @@ export default class Connect extends Vue {
     this.successLinks = appConfig.app.issuedSuccess.links;
     if(this.successLinks.length > 1){
       this.voflow = true;
-      const connectionForVR = (await this.$store.getters[
+      const connectionForVR =  this.$store.getters[
         "connection/getConnection"
-      ]) as Connection;
+      ] as Connection;
       this.otherUrl = this.successLinks[1] + '?invite_token=' + localStorage.getItem("tokenOth")
       + '&connection=' + connectionForVR.id;
     }
