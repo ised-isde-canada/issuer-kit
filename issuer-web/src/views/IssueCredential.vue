@@ -150,9 +150,12 @@ export default class Connect extends Vue {
 
   //eslint-disable-next-line @typescript-eslint/no-explicit-any
   private async requestCredentialIssuance(config: AppConfig): Promise<any> {
+
     const credential = (await this.$store.getters[
       "credential/getCredential"
     ]) as Credential;
+
+    console.log("these are the claims" + credential.claims);
     const connection = (await this.$store.getters[
       "connection/getConnection"
     ]) as Connection;
