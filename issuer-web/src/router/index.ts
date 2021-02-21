@@ -14,15 +14,15 @@ function router(config: AppConfig): VueRouter {
 
   // Application routes
   const appRoutes = [
-    {
-      path: "/",
-      name: "Home",
-      component: Home,
-      meta: {
-       isPublic: true
-      },
-      beforeEnter: validToken
-    },
+  //  {
+    //  path: "/",
+      //name: "Home",
+      //component: Home,
+      //meta: {
+       //isPublic: true
+      //},
+      //beforeEnter: validToken
+    //},
     {
       // required for backwards compatibility with old issuer app
       path: "/validate",
@@ -34,7 +34,7 @@ function router(config: AppConfig): VueRouter {
       beforeEnter: validToken
     },
     {
-      path: "/credential-data",
+      path: "/",
       name: "Credential Data",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
