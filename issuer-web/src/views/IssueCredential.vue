@@ -34,20 +34,17 @@
         <v-row v-if="issued">
           <v-col cols="12">
             <v-icon class="mx-3" color="success">fas fa-check-circle</v-icon>
-            Your {{ successText }}  has been issued!
+            Your {{ successText }}  has been issued to your wallet!
           </v-col>
         </v-row>
       </v-container>
 
       <v-divider class="mx-4" v-if="issued"></v-divider>
 
-      <v-container fluid v-if="issued">
-             <p class="text-center text-success mrgn-bttm-md"><strong>You have obtained your {{ successText }}! You should now have the credential in your wallet.</strong></p>
-      </v-container>
-
-      <v-container fluid v-if="issued && voflow ">
-             <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a> -->
-             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE TO GET YOUR RELATIONSHIP CREDENTIAL</a>
+      <v-container fluid v-if="issued && !voflow ">
+             <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a>
+             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE TO GET YOUR RELATIONSHIP CREDENTIAL</a> -->
+             <p class="text-center text-success mrgn-bttm-md"><strong>You have now obtained all the necessary credentials in your wallet to use with authorized partners.</strong></p>
       </v-container>
 
 

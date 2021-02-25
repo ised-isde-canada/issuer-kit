@@ -16,7 +16,7 @@
       </p>
 
       <p>
-        Once a connection is established and you present it on your digital wallet, it will issue you your {{successText}}.
+        Once a connection is established and you present it on your digital wallet, it will issue you your {{successText}} and start the confirmation for your federal corporation relationship credential.
       </p>
 
       <v-progress-circular
