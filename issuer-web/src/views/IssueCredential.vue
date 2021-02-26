@@ -43,7 +43,7 @@
 
       <v-container fluid v-if="issued && !voflow ">
              <!-- <a class="btn btn-default pull-left" :href="corpcanUrl" aria-label="Next">MAYBE LATER</a>
-             <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE TO GET YOUR RELATIONSHIP CREDENTIAL</a> -->
+            <a class="btn btn-success pull-right mrgn-bttm-md" :href="otherUrl" aria-label="Next">CONTINUE TO GET YOUR RELATIONSHIP CREDENTIAL</a> -->
              <p class="text-center text-success mrgn-bttm-md"><strong>You have now obtained all the necessary credentials in your wallet to use with authorized partners.</strong></p>
       </v-container>
 
@@ -102,10 +102,14 @@ export default class Connect extends Vue {
         // silently sign out of the app
         // H.N change ..only after VR
         if(!this.voflow){
-         this.$store.dispatch("oidcStore/signOutOidcSilent");
+            this.$store.dispatch("oidcStore/signOutOidcSilent");
         }
-        // remove data from localStorage
-        localStorage.removeItem("issuer-invitation");
+        else {
+           localStorage.removeItem("issuer-invitation");
+           window.location.replace(this.otherUrl);
+        }
+
+
       });
     });
   }
