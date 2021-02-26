@@ -50,6 +50,7 @@ export default class DataCollection extends Vue {
   private survey = new SurveyVue.Model();
   private surveyKey = 0;
   private entity = "";
+  private nowStartVR = "";
 
   created() {
     SurveyVue.StylesManager.applyTheme(this.themeName);
@@ -121,6 +122,7 @@ export default class DataCollection extends Vue {
 
     if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")) {
       this.entity = "Relationship";
+      this.nowStartVR = "You successfully obtained your federal corporation credential! You now must confirm your relationship to the corporation."
     }
     else {
       this.entity = "Organization";
@@ -162,12 +164,5 @@ export default class DataCollection extends Vue {
   }
 }
 
-if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")) {
-this.entity = "Relationship";
 
-this.nowStartVR = "You successfully obtained your federal corporation credential! You now must confirm your relationship to the corporation."
-}
-else {
-this.entity = "Organization";
-}
 </script>
