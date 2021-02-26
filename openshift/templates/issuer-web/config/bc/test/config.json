@@ -1,7 +1,7 @@
 {
   "env": "test",
   "issuer": {
-    "name": "Corporations digital credential issuing app"
+    "name": "Corporations Canada issuing application"
   },
   "inviteRequired": true,
   "authentication": {
