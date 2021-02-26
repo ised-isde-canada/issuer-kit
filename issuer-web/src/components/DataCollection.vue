@@ -26,7 +26,7 @@
 
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
-        <p class="text-center mrgn-tp-lg">If the data is incorrect, please call 1-800-345-1235 or <br>email ic.corporationscanada.ic@canada.ca to fix any inconsistencies before continuing.</p>
+        <p class="text-center mrgn-tp-lg">If the data is incorrect, please call 1-800-345-1235 or email ic.corporationscanada.ic@canada.ca to fix any inconsistencies before continuing.</p>
         <survey :survey="survey" :key="surveyKey"></survey>
       </v-container>
     </v-card>
@@ -122,7 +122,7 @@ export default class DataCollection extends Vue {
 
     if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")) {
       this.entity = "Relationship";
-      this.nowStartVR = "You successfully obtained your federal corporation credential! You now must confirm your relationship to the corporation."
+      this.nowStartVR = "You successfully obtained your federal corporation credential! <br>You now must confirm your relationship to the corporation."
     }
     else {
       this.entity = "Organization";
