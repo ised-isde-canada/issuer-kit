@@ -19,9 +19,14 @@
 <template>
   <v-container fluid>
     <h2 class="text-center">{{ entity }} information</h2>
+
+    <v-container>
+      <p class="text-center text-success mrgn-bttm-md"><strong>{{ nowStartVR }}</strong></p>
+    </v-container>
+
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
       <v-container class="claim-data-container">
-        <p class="text-center mrgn-tp-lg">If the data is incorrect, please call 1-800-345-1235 or <br>email credexchange@corpcan.ca to fix any inconsistencies before continuing.</p>
+        <p class="text-center mrgn-tp-lg">If the data is incorrect, please call 1-800-345-1235 or <br>email ic.corporationscanada.ic@canada.ca to fix any inconsistencies before continuing.</p>
         <survey :survey="survey" :key="surveyKey"></survey>
       </v-container>
     </v-card>
@@ -155,5 +160,14 @@ export default class DataCollection extends Vue {
       SurveyVue.FunctionFactory.Instance.register(f.name, f);
     });
   }
+}
+
+if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")) {
+this.entity = "Relationship";
+
+this.nowStartVR = "You successfully obtained your federal corporation credential! You now must confirm your relationship to the corporation."
+}
+else {
+this.entity = "Organization";
 }
 </script>
