@@ -106,9 +106,11 @@ export default class Connect extends Vue {
         }
         else {
            localStorage.removeItem("issuer-invitation");
-           window.setTimeout(function(){
-              window.location.replace(this.otherUrl);
-          }, 2000);
+          // window.setTimeout(function(){
+          //    window.location.replace(this.otherUrl);
+        //  }, 2000);
+
+          setTimeout(() => window.location.replace(this.otherUrl), 2000);
         }
       });
     });
