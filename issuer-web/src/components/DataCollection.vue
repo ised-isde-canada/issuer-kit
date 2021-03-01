@@ -21,7 +21,7 @@
     <h2 class="text-center">{{ entity }} information</h2>
 
     <v-container>
-      <p class="text-center text-success mrgn-bttm-md"><strong>{{ nowStartVR }}</strong></p>
+      <p class="text-center text-success mrgn-bttm-md"><strong><v-html>{{ nowStartVR }}</v-html></strong></p>
     </v-container>
 
     <v-card class="mx-auto my-2 lighten-4" max-width="800" outlined>
