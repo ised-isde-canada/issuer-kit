@@ -47,7 +47,7 @@
     "multiUse": true
   },
   "authentication":{
-    "jwksUri": "https://sso-demo.ised-isde.canada.ca/auth/realms/individual/protocol/openid-connect/certs",
+    "jwksUri": "https://sso-dev.ised-isde.canada.ca/auth/realms/individual/protocol/openid-connect/certs",
     "algorithms": ["RS256"]
   }
 }

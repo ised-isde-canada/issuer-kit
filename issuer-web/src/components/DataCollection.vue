@@ -122,7 +122,7 @@ export default class DataCollection extends Vue {
 
     if(Object.prototype.hasOwnProperty.call(invitation.data, "relationship")) {
       this.entity = "Relationship";
-      this.nowStartVR = "You successfully obtained your federal corporation credential! <br>You now must confirm your relationship to the corporation."
+      this.nowStartVR = "You successfully obtained your federal corporation credential!\nYou now must confirm your relationship to the corporation."
     }
     else {
       this.entity = "Organization";

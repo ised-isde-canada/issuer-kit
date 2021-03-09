@@ -5,9 +5,9 @@
   },
   "inviteRequired": true,
   "authentication": {
-    "enabled": true,
+    "enabled": false,
     "oidcSettings": {
-      "authority": "https://sso-demo.ised-isde.canada.ca/auth/realms/individual" ,
+      "authority": "https://sso-dev.ised-isde.canada.ca/auth/realms/individual" ,
       "clientId": "issuer-public",
       "redirectUri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca/oidc-callback" ,
       "redirect_uri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca/oidc-callback-error" ,
