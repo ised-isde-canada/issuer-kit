@@ -1,60 +1,341 @@
 {
-   "questions":
-   [
+  "showProgressBar": "top",
+  "pages": [
     {
-      "name": "corporationNumber",
-      "type": "text",
-      "title": "Corporation Number:",
-      "placeHolder": "",
-      "isRequired": true,
-      "readOnly": true,
-      "requiredErrorText": "Required Field"
+      "title": "Organization Details - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "businessNumber",
+          "type": "text",
+          "title": "Business Number:",
+          "placeHolder": "",
+          "isRequired": true,
+          "readOnly": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "entityType",
+          "type": "text",
+          "title": "Entity Type:",
+          "placeHolder": "",
+          "defaultValue": "Corporations Canada - Business Corporation",
+          "isRequired": true,
+          "readOnly": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "issuerLegalName",
+          "type": "text",
+          "title": "Issuer Legal Name:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "homeJurisdictionLegalName",
+          "type": "text",
+          "title": "Home Jurisdiction Legal Name:",
+          "placeHolder": "",
+          "defaultValue": "N.A.",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "alternateLegalName",
+          "type": "text",
+          "title": "Alternate Legal Name:",
+          "placeHolder": "",
+          "defaultValue": "Not Provided",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "operatingName",
+          "type": "text",
+          "title": "Operating Name:",
+          "placeHolder": "",
+          "defaultValue": "Not Provided",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        }
+      ]
     },
     {
-      "name": "businessNumber",
-      "type": "text",
-      "title": "Business Number:",
-      "placeHolder": "",
-      "isRequired": true,
-      "readOnly": true,
-      "requiredErrorText": "Required Field"
+      "title": "Organization Address - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "streetAddress",
+          "type": "text",
+          "title": "Street Address:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "city",
+          "type": "text",
+          "title": "City:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "province",
+          "type": "text",
+          "title": "Province:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "country",
+          "type": "text",
+          "title": "Country:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "postalCode",
+          "type": "text",
+          "title": "Postal Code:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        }
+      ]
     },
     {
-      "name": "corporateName",
-      "type": "text",
-      "inputType": "text",
-      "title": "Corporation Name:",
-      "placeHolder": "",
-      "isRequired": true,
-      "readOnly": true,
-      "requiredErrorText": "Required Field"
+      "title": "Registration Details - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "legislation",
+          "type": "text",
+          "title": "Legislation:",
+          "placeHolder": "",
+          "defaultValue": "N.A.",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "registeredJurisdiction",
+          "type": "text",
+          "title": "Registered Jurisdiction:",
+          "placeHolder": "",
+          "defaultValue": "CC",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "homeJurisdiction",
+          "type": "text",
+          "title": "Home Jurisdiction:",
+          "placeHolder": "",
+          "defaultValue": "CC",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        }
+      ]
     },
     {
-      "name": "legislationName",
-      "type": "text",
-      "inputType": "text",
-      "title": "Legislation Name:",
-      "placeHolder": "",
-      "isRequired": true,
-      "readOnly": true,
-      "requiredErrorText": "Required Field"
+      "title": "Organization Directors (1 of 2) - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "director_001_FullName",
+          "type": "text",
+          "title": "1st Director -  Full Name:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_001_StreetAddress",
+          "type": "text",
+          "title": "1st Director - Street Address:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_001_City",
+          "type": "text",
+          "title": "1st Director - City:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_001_Province",
+          "type": "text",
+          "title": "1st Director - Province:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_001_Country",
+          "type": "text",
+          "title": "1st Director - Country:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_001_PostalCode",
+          "type": "text",
+          "title": "1st Director - Postal Code:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "type": "radiogroup",
+          "name": "director_001_CanadianResident",
+          "title": "1st Director - Canadian Residency:",
+          "isRequired": true,
+          "requiredErrorText": "Required Field",
+          "hasNone": false,
+          "colCount": 2,
+          "choices": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
     },
     {
-      "name": "statusName",
-      "type": "text",
-      "inputType": "text",
-      "title": "Status Name:",
-      "placeHolder": "",
-      "isRequired": true,
-      "readOnly": true,
-      "requiredErrorText": "Required Field"
+      "title": "Credential Details - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "registrationDate",
+          "type": "text",
+          "title": "Registration Date:",
+          "placeHolder": "",
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "registrationExpiryDate",
+          "type": "text",
+          "title": "Registration Expiry Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "registrationRenewalEffective",
+          "type": "text",
+          "title": "Registration Renewal Effective Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "issuerLegalNameEffective",
+          "type": "text",
+          "title": "Issuer Legal Name Effective Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "homeJurisdictionLegalNameEffective",
+          "type": "text",
+          "title": "Home Jurisdiction Legal Name Effective Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "entityStatus",
+          "type": "text",
+          "title": "Entity Status:",
+          "placeHolder": "",
+          "defaultValue": "Active",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "entityStatusEffective",
+          "type": "text",
+          "title": "Entity Status Effective Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "issuer",
+          "type": "text",
+          "title": "Issuer:",
+          "placeHolder": "",
+          "defaultValue": "BC",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "issueDate",
+          "type": "text",
+          "title": "Issue Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "expirationDate",
+          "type": "text",
+          "title": "Expiration Date:",
+          "placeHolder": "",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "credentialStatus",
+          "type": "text",
+          "title": "Credential Status:",
+          "placeHolder": "",
+          "defaultValue": "Active",
+          "readOnly": true,
+          "isRequired": true,
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "type": "text",
+          "name": "placeholder",
+          "defaultValue": "placeholder",
+          "readOnly": true,
+          "visibleIf": "{businessNumber} empty"
+        },
+        {
+          "type": "text",
+          "name": "given_names",
+          "defaultValue": "GIVEN NAMES",
+          "readOnly": true,
+          "visibleIf": "{director_001_FullName} empty"
+        },
+        {
+          "type": "text",
+          "name": "family_name",
+          "defaultValue": "FAMILY NAMES",
+          "readOnly": true,
+          "visibleIf": "{director_001_FullName} empty"
+        }
+      ]
     }
-],
-"triggers": [
+  ],
+  "triggers": [
     {
       "type": "runexpression",
       "expression": "{placeholder} notempty",
-      "runExpression": "setCurrentISODate('issued')"
+      "runExpression": "populateFields()"
     }
   ]
 }
