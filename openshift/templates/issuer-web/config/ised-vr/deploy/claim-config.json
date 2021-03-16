@@ -2,28 +2,18 @@
    "questions":
    [
     {
-      "name": "corporationNumber",
+      "name": "organizationIssuerLegalName",
       "type": "text",
-      "title": "Corporation Number:",
+      "title": "Organization Issuer Legal Name:",
       "placeHolder": "",
       "isRequired": true,
       "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "businessNumber",
+      "name": "organizationBusinessNumber",
       "type": "text",
       "title": "Business Number:",
-      "placeHolder": "",
-      "isRequired": true,
-      "readOnly": true,
-      "requiredErrorText": "Required Field"
-    },
-    {
-      "name": "corporateName",
-      "type": "text",
-      "inputType": "text",
-      "title": "Corporation Name:",
       "placeHolder": "",
       "isRequired": true,
       "readOnly": true,
@@ -40,23 +30,101 @@
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "firstName",
+      "name": "relationshipDescription",
       "type": "text",
       "inputType": "text",
-      "title": "First Name:",
+      "title": "Relationship Description:",
       "placeHolder": "",
       "isRequired": true,
       "readOnly": true,
       "requiredErrorText": "Required Field"
     },
     {
-      "name": "lastName",
+      "name": "relationshipStatus",
       "type": "text",
       "inputType": "text",
-      "title": "Last Name:",
+      "title": "Relationship Status:",
       "placeHolder": "",
       "isRequired": true,
       "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "personGivenName",
+      "type": "text",
+      "inputType": "text",
+      "title": "Given Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "personFamilyName",
+      "type": "text",
+      "inputType": "text",
+      "title": "Family Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "personAdditionalName",
+      "type": "text",
+      "inputType": "text",
+      "title": "Additional Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "relationshipStatusEffective",
+      "type": "text",
+      "inputType": "text",
+      "title": "Relationship Status Effective:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "issuer",
+      "type": "text",
+      "title": "Issuer:",
+      "placeHolder": "",
+      "defaultValue": "BC",
+      "readOnly": true,
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "issuerDate",
+      "type": "text",
+      "title": "Issue Date:",
+      "placeHolder": "",
+      "readOnly": true,
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "expirationDate",
+      "type": "text",
+      "title": "Expiration Date:",
+      "placeHolder": "",
+      "readOnly": true,
+      "isRequired": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "credentialStatus",
+      "type": "text",
+      "title": "Credential Status:",
+      "placeHolder": "",
+      "defaultValue": "Active",
+      "readOnly": true,
+      "isRequired": true,
       "requiredErrorText": "Required Field"
     }
 ],

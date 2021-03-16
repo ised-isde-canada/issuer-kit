@@ -61,6 +61,7 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
+    this.survey.mode = 'display';
     this.survey.completeText = "CONFIRM AND REQUEST CREDENTIAL";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();

@@ -52,18 +52,40 @@
  },
  {
    "schema_name": "Verified Relationship",
-   "schema_version": "0.1",
+   "schema_version": "0.0.1",
    "attributes": [
-     "corporationNumber",
-     "businessNumber",
-     "corporateName" ,
+     "organizationIssuerLegalName",
+     "organizationBusinessNumber",
      "relationship",
-     "firstName",
-     "lastName"
+     "relationshipDescription",
+     "relationshipStatus",
+     "personGivenName",
+     "personFamilyName",
+     "personAdditionalName",
+     "relationshipStatusEffective",
+     "issuer",
+     "issuerDate",
+     "expirationDate",
+     "credentialStatus"
    ],
    "revocable": true,
-   "tag": "ised-verified-relationship",
+   "tag": "ised-verified-relationship-release1",
    "public": true
+},
+{
+  "schema_name": "Verified Relationship",
+  "schema_version": "0.1",
+  "attributes": [
+    "corporationNumber",
+    "businessNumber",
+    "corporateName" ,
+    "relationship",
+    "firstName",
+    "lastName"
+  ],
+  "revocable": true,
+  "tag": "ised-verified-relationship",
+  "public": true
 },
 {
   "schema_name": "Verified Organization",

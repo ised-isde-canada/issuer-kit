@@ -189,17 +189,11 @@
           "requiredErrorText": "Required Field"
         },
         {
-          "type": "radiogroup",
+          "type": "text",
           "name": "director_001_CanadianResident",
           "title": "1st Director - Canadian Residency:",
           "isRequired": true,
-          "requiredErrorText": "Required Field",
-          "hasNone": false,
-          "colCount": 2,
-          "choices": [
-            "Yes",
-            "No"
-          ]
+          "requiredErrorText": "Required Field"
         }
       ]
     },

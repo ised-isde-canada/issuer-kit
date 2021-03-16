@@ -1,0 +1,70 @@
+{
+   "questions":
+   [
+    {
+      "name": "corporationNumber",
+      "type": "text",
+      "title": "Corporation Number:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "businessNumber",
+      "type": "text",
+      "title": "Business Number:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "corporateName",
+      "type": "text",
+      "inputType": "text",
+      "title": "Corporation Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "relationship",
+      "type": "text",
+      "inputType": "text",
+      "title": "Relationship:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "firstName",
+      "type": "text",
+      "inputType": "text",
+      "title": "First Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    },
+    {
+      "name": "lastName",
+      "type": "text",
+      "inputType": "text",
+      "title": "Last Name:",
+      "placeHolder": "",
+      "isRequired": true,
+      "readOnly": true,
+      "requiredErrorText": "Required Field"
+    }
+],
+"triggers": [
+    {
+      "type": "runexpression",
+      "expression": "{placeholder} notempty",
+      "runExpression": "setCurrentISODate('issued')"
+    }
+  ]
+}
