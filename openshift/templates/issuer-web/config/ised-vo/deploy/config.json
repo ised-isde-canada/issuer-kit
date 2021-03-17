@@ -26,6 +26,6 @@
     "links": ["federal corporation relationship credential","https://issuer-web-vr-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca/"]
   },
   "credentials": {
-     "schema_id":"7cTuxo7KuS7uTPQ9ua9kQE:2:Verified Organization:0.0.2"
+     "schema_id":"7cTuxo7KuS7uTPQ9ua9kQE:2:Verified Organization:0.0.1"
    }
 }
