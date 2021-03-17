@@ -46,6 +46,7 @@
       "title": "Relationship Status:",
       "placeHolder": "",
       "isRequired": true,
+      "defaultValue": "Not Issued",
       "readOnly": true,
       "requiredErrorText": "Required Field"
     },
@@ -76,6 +77,7 @@
       "title": "Additional Name:",
       "placeHolder": "",
       "isRequired": true,
+      "defaultValue": "Not Issued",
       "readOnly": true,
       "requiredErrorText": "Required Field"
     },
@@ -86,6 +88,7 @@
       "title": "Relationship Status Effective:",
       "placeHolder": "",
       "isRequired": true,
+      "defaultValue": "Not Issued",
       "readOnly": true,
       "requiredErrorText": "Required Field"
     },
@@ -94,7 +97,7 @@
       "type": "text",
       "title": "Issuer:",
       "placeHolder": "",
-      "defaultValue": "BC",
+      "defaultValue": "Corporations Canada",
       "readOnly": true,
       "isRequired": true,
       "requiredErrorText": "Required Field"
@@ -106,6 +109,7 @@
       "placeHolder": "",
       "readOnly": true,
       "isRequired": true,
+      "defaultValue": "Not Issued",
       "requiredErrorText": "Required Field"
     },
     {
@@ -115,6 +119,7 @@
       "placeHolder": "",
       "readOnly": true,
       "isRequired": true,
+      "defaultValue": "Not Issued",
       "requiredErrorText": "Required Field"
     },
     {

@@ -1,5 +1,4 @@
 {
-  "showProgressBar": "top",
   "pages": [
     {
       "title": "Organization Details - page {pageno} of {pagecount}.",
@@ -36,7 +35,7 @@
           "type": "text",
           "title": "Home Jurisdiction Legal Name:",
           "placeHolder": "",
-          "defaultValue": "N.A.",
+          "defaultValue": "Not Issued",
           "isRequired": true,
           "requiredErrorText": "Required Field"
         },
@@ -54,7 +53,7 @@
           "type": "text",
           "title": "Operating Name:",
           "placeHolder": "",
-          "defaultValue": "Not Provided",
+          "defaultValue": "Not Issued",
           "isRequired": true,
           "requiredErrorText": "Required Field"
         }
@@ -122,7 +121,7 @@
           "type": "text",
           "title": "Registered Jurisdiction:",
           "placeHolder": "",
-          "defaultValue": "CC",
+          "defaultValue": "Not Issued",
           "isRequired": true,
           "requiredErrorText": "Required Field"
         },
@@ -131,14 +130,14 @@
           "type": "text",
           "title": "Home Jurisdiction:",
           "placeHolder": "",
-          "defaultValue": "CC",
+          "defaultValue": "Corporations Canada",
           "isRequired": true,
           "requiredErrorText": "Required Field"
         }
       ]
     },
     {
-      "title": "Organization Directors (1 of 2) - page {pageno} of {pagecount}.",
+      "title": "Organization Directors (1 of 5) - page {pageno} of {pagecount}.",
       "questions": [
         {
           "name": "director_001_FullName",
@@ -198,6 +197,274 @@
       ]
     },
     {
+      "title": "Organization Directors (2 of 5) - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "director_002_FullName",
+          "type": "text",
+          "title": "1st Director -  Full Name:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_002_StreetAddress",
+          "type": "text",
+          "title": "1st Director - Street Address:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_002_City",
+          "type": "text",
+          "title": "1st Director - City:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_002_Province",
+          "type": "text",
+          "title": "1st Director - Province:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_002_Country",
+          "type": "text",
+          "title": "1st Director - Country:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_002_PostalCode",
+          "type": "text",
+          "title": "1st Director - Postal Code:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "type": "text",
+          "name": "director_002_CanadianResident",
+          "title": "1st Director - Canadian Residency:",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        }
+      ]
+    },
+    {
+      "title": "Organization Directors (3 of 5) - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "director_003_FullName",
+          "type": "text",
+          "title": "1st Director -  Full Name:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_003_StreetAddress",
+          "type": "text",
+          "title": "1st Director - Street Address:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_003_City",
+          "type": "text",
+          "title": "1st Director - City:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_003_Province",
+          "type": "text",
+          "title": "1st Director - Province:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_003_Country",
+          "type": "text",
+          "title": "1st Director - Country:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_003_PostalCode",
+          "type": "text",
+          "title": "1st Director - Postal Code:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "type": "text",
+          "name": "director_003_CanadianResident",
+          "title": "1st Director - Canadian Residency:",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        }
+      ]
+    },
+    {
+      "title": "Organization Directors (4 of 5) - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "director_004_FullName",
+          "type": "text",
+          "title": "1st Director -  Full Name:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_004_StreetAddress",
+          "type": "text",
+          "title": "1st Director - Street Address:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_004_City",
+          "type": "text",
+          "title": "1st Director - City:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_004_Province",
+          "type": "text",
+          "title": "1st Director - Province:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_004_Country",
+          "type": "text",
+          "title": "1st Director - Country:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_004_PostalCode",
+          "type": "text",
+          "title": "1st Director - Postal Code:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "type": "text",
+          "name": "director_004_CanadianResident",
+          "title": "1st Director - Canadian Residency:",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        }
+      ]
+    },
+    {
+      "title": "Organization Directors (5 of 5) - page {pageno} of {pagecount}.",
+      "questions": [
+        {
+          "name": "director_005_FullName",
+          "type": "text",
+          "title": "1st Director -  Full Name:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_005_StreetAddress",
+          "type": "text",
+          "title": "1st Director - Street Address:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_005_City",
+          "type": "text",
+          "title": "1st Director - City:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_005_Province",
+          "type": "text",
+          "title": "1st Director - Province:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_005_Country",
+          "type": "text",
+          "title": "1st Director - Country:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "name": "director_005_PostalCode",
+          "type": "text",
+          "title": "1st Director - Postal Code:",
+          "placeHolder": "",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        },
+        {
+          "type": "text",
+          "name": "director_005_CanadianResident",
+          "title": "1st Director - Canadian Residency:",
+          "isRequired": true,
+          "defaultValue": "Not Issued",
+          "requiredErrorText": "Required Field"
+        }
+      ]
+    },
+    {
       "title": "Credential Details - page {pageno} of {pagecount}.",
       "questions": [
         {
@@ -215,6 +482,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -224,6 +492,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -233,6 +502,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -242,6 +512,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -261,6 +532,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -268,7 +540,7 @@
           "type": "text",
           "title": "Issuer:",
           "placeHolder": "",
-          "defaultValue": "BC",
+          "defaultValue": "Corporations Canada",
           "readOnly": true,
           "isRequired": true,
           "requiredErrorText": "Required Field"
@@ -280,6 +552,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -289,6 +562,7 @@
           "placeHolder": "",
           "readOnly": true,
           "isRequired": true,
+          "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
         {
@@ -323,13 +597,6 @@
           "visibleIf": "{director_001_FullName} empty"
         }
       ]
-    }
-  ],
-  "triggers": [
-    {
-      "type": "runexpression",
-      "expression": "{placeholder} notempty",
-      "runExpression": "populateFields()"
     }
   ]
 }

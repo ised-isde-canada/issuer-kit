@@ -30,6 +30,7 @@
         <survey :survey="survey" :key="surveyKey"></survey>
       </v-container>
     </v-card>
+    <div id="surveyResult"></div>
   </v-container>
 </template>
 
@@ -61,7 +62,6 @@ export default class DataCollection extends Vue {
     const claimConfig = this.$store.getters["configuration/getConfiguration"]
       .claims;
     this.survey = new SurveyVue.Model(claimConfig);
-    this.survey.mode = 'display';
     this.survey.completeText = "CONFIRM AND REQUEST CREDENTIAL";
     this.survey.onComplete.add(result => {
       const credentialClaims = new Array<Claim>();
@@ -69,7 +69,6 @@ export default class DataCollection extends Vue {
         credentialClaims.push({ name: key, value: result.data[key] });
       });
       this.$store.commit("credential/updateClaims", credentialClaims);
-
       //Go to next page on successful completion
       //Changes by H.N
       //In both cases we are bypassing confirm data as well
