@@ -2,13 +2,11 @@ import OidcCallback from "@/components/auth/OidcCallback.vue";
 import OidcCallbackError from "@/components/auth/OidcCallbackError.vue";
 import { AppConfig } from "@/models/appConfig";
 import IssuerStore from "@/store";
-import { multiGuard } from "@/utils";
 import Home from "@/views/Home.vue";
 import Unauthorized from "@/views/Unauthorized.vue";
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import { vuexOidcCreateRouterMiddleware } from "vuex-oidc";
-import hasPresReq from "./guards/pres-req";
 import validToken from "./guards/valid-token";
 
 function router(config: AppConfig): VueRouter {
@@ -21,7 +19,7 @@ function router(config: AppConfig): VueRouter {
       name: "Home",
       component: Home,
       meta: {
-        isPublic: true
+       isPublic: true
       },
       beforeEnter: validToken
     },
@@ -33,7 +31,7 @@ function router(config: AppConfig): VueRouter {
       meta: {
         isPublic: true
       },
-      beforeEnter: multiGuard([validToken, hasPresReq])
+      beforeEnter: validToken
     },
     {
       path: "/credential-data",
@@ -43,7 +41,7 @@ function router(config: AppConfig): VueRouter {
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "data-entry" */ "../views/DataEntry.vue"),
-      beforeEnter: multiGuard([validToken, hasPresReq])
+      beforeEnter: validToken
     },
     {
       path: "/confirm-data",
@@ -55,7 +53,7 @@ function router(config: AppConfig): VueRouter {
         import(
           /* webpackChunkName: "confirm-data" */ "../views/ConfirmData.vue"
         ),
-      beforeEnter: multiGuard([validToken, hasPresReq])
+      beforeEnter: validToken
     },
     {
       path: "/connect",
@@ -65,11 +63,11 @@ function router(config: AppConfig): VueRouter {
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "connect" */ "../views/Connect.vue"),
-      beforeEnter: multiGuard([validToken, hasPresReq])
+      beforeEnter: validToken
     },
     {
       path: "/issue-credential",
-      name: "Issuing Credential",
+      name: "Issuing credential",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -77,7 +75,7 @@ function router(config: AppConfig): VueRouter {
         import(
           /* webpackChunkName: "issue-credential" */ "../views/IssueCredential.vue"
         ),
-      beforeEnter: multiGuard([validToken, hasPresReq])
+      beforeEnter: validToken
     },
     {
       path: "/unauthorized",
