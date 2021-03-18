@@ -5,7 +5,7 @@
   },
   "inviteRequired": true,
   "authentication": {
-    "enabled": false,
+    "enabled": true,
     "oidcSettings": {
       "authority": "https://sso-dev.ised-isde.canada.ca/auth/realms/individual" ,
       "clientId": "issuer-public",
