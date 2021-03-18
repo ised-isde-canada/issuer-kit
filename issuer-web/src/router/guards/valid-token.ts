@@ -43,7 +43,7 @@ export default async function validToken(
       next();
     } else {
 
-          console.log("Invitation status is not valid");
+          console.log("Invitation status is not valid " + invitation.status );
       next({ path: "unauthorized" });
     }
   }
