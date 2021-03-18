@@ -3,7 +3,7 @@ import { Invitation, InvitationStatus } from "@/models/invitation";
 import * as ConfigService from "@/services/config";
 import IssuerStore from "@/store";
 import { Route } from "vue-router";
-import logger from './logger';
+
 
 export default async function validToken(
   to: Route,
@@ -20,7 +20,7 @@ export default async function validToken(
         if (result) {
           next();
         } else {
-          logger.info('Invitation token is invalid - redirecting to unauth');
+          console.log('Invitation token is invalid - redirecting to unauth');
           next({ path: "/unauthorized" });
         }
       });
@@ -42,7 +42,8 @@ export default async function validToken(
     if (invitation.status === InvitationStatus.VALID) {
       next();
     } else {
-      logger.info('Invitation status is not valid');
+
+          console.log("Invitation status is not valid");
       next({ path: "unauthorized" });
     }
   }
