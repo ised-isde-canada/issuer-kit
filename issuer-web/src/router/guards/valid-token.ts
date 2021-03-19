@@ -11,7 +11,7 @@ export default async function validToken(
   next: Function
 ) {
   const config: AppConfig = await ConfigService.getAppConfig();
-    console.log('Invitation token being checked ' + to);
+    console.log('Invitation token being checked ' + ${to});
   if (!config.inviteRequired) {
     next();
   } else if (to.path === "/") {
