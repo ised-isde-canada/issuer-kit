@@ -144,8 +144,7 @@ export default class DataCollection extends Vue {
     try {
       this.survey.getQuestionByName(key).setPropertyValue("value", value);
       this.survey.setValue(key, value);
-      // disabling read only
-      //this.survey.getQuestionByName(key).readOnly = readonly;
+      this.survey.getQuestionByName(key).readOnly = readonly;
     } catch (e) {
       // eslint-disable-next-line
       console.warn(

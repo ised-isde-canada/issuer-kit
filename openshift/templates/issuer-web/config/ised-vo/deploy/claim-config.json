@@ -60,12 +60,6 @@
           "isRequired": true,
           "readOnly": true,
           "requiredErrorText": "Required Field"
-        },
-        {
-          "type": "text",
-          "name": "family_name",
-          "defaultValue": "FAMILY NAMES",
-          "visibleIf": "{operatingName} empty"
         }
       ]
     },
@@ -78,7 +72,7 @@
           "title": "Street Address:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -87,7 +81,7 @@
           "title": "City:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -96,7 +90,7 @@
           "title": "Province:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -105,7 +99,7 @@
           "title": "Country:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -114,15 +108,9 @@
           "title": "Postal Code:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
-        },
-        {
-         "type": "text",
-         "name": "family_name",
-         "defaultValue": "FAMILY NAMES",
-         "visibleIf": "{postalCode} empty"
-       }
+        }
       ]
     },
     {
@@ -135,7 +123,7 @@
           "placeHolder": "",
           "defaultValue": "N.A.",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -145,7 +133,7 @@
           "placeHolder": "",
           "defaultValue": "Not Issued",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -155,15 +143,9 @@
           "placeHolder": "",
           "defaultValue": "Corporations Canada",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
-        },
-        {
-         "type": "text",
-         "name": "family_name",
-         "defaultValue": "FAMILY NAMES",
-         "visibleIf": "{homeJurisdiction} empty"
-       }
+        }
       ]
     },
     {
@@ -175,7 +157,7 @@
           "title": "1st Director -  Full Name:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -184,7 +166,7 @@
           "title": "1st Director - Street Address:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -193,7 +175,7 @@
           "title": "1st Director - City:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -202,7 +184,7 @@
           "title": "1st Director - Province:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -211,7 +193,7 @@
           "title": "1st Director - Country:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -220,7 +202,7 @@
           "title": "1st Director - Postal Code:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -228,15 +210,9 @@
           "name": "director_001_CanadianResident",
           "title": "1st Director - Canadian Residency:",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
-        },
-        {
-         "type": "text",
-         "name": "family_name",
-         "defaultValue": "FAMILY NAMES",
-         "visibleIf": "{director_001_CanadianResident} empty"
-       }
+        }
       ]
     },
     {
@@ -248,7 +224,7 @@
           "title": "Registration Date:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -257,7 +233,7 @@
           "title": "Registration Expiry Date:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "defaultValue": "Not Issued",
           "requiredErrorText": "Required Field"
         },
@@ -267,8 +243,8 @@
           "title": "Registration Renewal Effective Date:",
           "placeHolder": "",
           "isRequired": true,
+          "readOnly": true,
           "defaultValue": "Not Issued",
-          "readOnly" : true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -277,8 +253,8 @@
           "title": "Issuer Legal Name Effective Date:",
           "placeHolder": "",
           "isRequired": true,
+          "readOnly": true,
           "defaultValue": "Not Issued",
-          "readOnly" : true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -288,7 +264,7 @@
           "placeHolder": "",
           "isRequired": true,
           "defaultValue": "Not Issued",
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -298,7 +274,7 @@
           "placeHolder": "",
           "defaultValue": "Active",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -308,7 +284,7 @@
           "placeHolder": "",
           "isRequired": true,
           "defaultValue": "Not Issued",
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -318,7 +294,7 @@
           "placeHolder": "",
           "defaultValue": "Corporations Canada",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -327,8 +303,8 @@
           "title": "Issue Date:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
           "defaultValue": "Not Issued",
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -337,8 +313,8 @@
           "title": "Expiration Date:",
           "placeHolder": "",
           "isRequired": true,
-          "readOnly" : true,
           "defaultValue": "Not Issued",
+          "readOnly": true,
           "requiredErrorText": "Required Field"
         },
         {
@@ -348,14 +324,8 @@
           "placeHolder": "",
           "defaultValue": "Active",
           "isRequired": true,
-          "readOnly" : true,
+          "readOnly": true,
           "requiredErrorText": "Required Field"
-        },
-        {
-          "type": "text",
-          "name": "placeholder",
-          "defaultValue": "placeholder",
-          "visibleIf": "{homeJurisdictionLegalNameEffective} empty"
         }
       ]
     }
