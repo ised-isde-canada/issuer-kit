@@ -99,19 +99,9 @@ export default class Connect extends Vue {
         appConfig.app
       ).then(() => {
         this.issued = true;
-        // silently sign out of the app
-        // H.N change ..only after VR
-        //if(!this.voflow){
-            this.$store.dispatch("oidcStore/signOutOidcSilent");
-      //  }
-      //  else {
-           localStorage.removeItem("issuer-invitation");
-          // window.setTimeout(function(){
-          //    window.location.replace(this.otherUrl);
-        //  }, 2000);
-
-          setTimeout(() => window.location.replace(this.otherUrl), 2000);
-      //}
+        this.$store.dispatch("oidcStore/signOutOidcSilent");
+        localStorage.removeItem("issuer-invitation");
+        setTimeout(() => window.location.replace(this.otherUrl), 2000);
       });
     });
   }
