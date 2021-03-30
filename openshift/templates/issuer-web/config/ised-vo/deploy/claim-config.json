@@ -46,7 +46,7 @@
           "type": "text",
           "title": "Alternate Legal Name:",
           "placeHolder": "",
-          "defaultValue": "Not Provided",
+          "defaultValue": "Not Issued",
           "isRequired": true,
           "readOnly": true,
           "requiredErrorText": "Required Field"

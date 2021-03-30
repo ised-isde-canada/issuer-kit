@@ -14,7 +14,7 @@
       "responseType": "code",
       "scope": "openid profile email",
       "automaticSilentRenew": true,
-      "silentRedirectUri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca" ,
+      "silentRedirectUri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca/silent-renew-oidc.html" ,
       "post_logout_redirect_uri": "https://issuer-web-ised-ised-vc-auth-dev.apps.dev.ocp-dev.ised-isde.canada.ca"
     }
   },

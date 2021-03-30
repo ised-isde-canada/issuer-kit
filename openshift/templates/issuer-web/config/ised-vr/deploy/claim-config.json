@@ -37,6 +37,7 @@
       "placeHolder": "",
       "isRequired": true,
       "readOnly": true,
+      "defaultValue": "Not Issued",
       "requiredErrorText": "Required Field"
     },
     {
