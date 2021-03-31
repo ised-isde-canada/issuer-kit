@@ -101,7 +101,11 @@ export default class Connect extends Vue {
         this.issued = true;
         this.$store.dispatch("oidcStore/signOutOidcSilent");
         localStorage.removeItem("issuer-invitation");
-        setTimeout(() => window.location.replace(this.otherUrl), 2000);
+         
+        if(this.voflow){
+         setTimeout(() => window.location.replace(this.otherUrl), 2000);
+        }
+
       });
     });
   }
